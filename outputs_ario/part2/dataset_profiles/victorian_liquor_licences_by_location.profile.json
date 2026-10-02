@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "dataset_id": "6f1cc305-a8b2-4748-bd40-c00754ad6504",
+    "title": "Victorian liquor licences by location",
+    "publisher": "Liquor Control Victoria",
+    "resource_id": "3804ec54-9b8d-477e-899f-64d33b4e2521",
+    "resource_name": "August 2026",
+    "resource_format": "XLSX",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-09-14T17:48:10.178976",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/victorian_liquor_licences_by_location/Current_Victorian_Licences_By_Location_31_August_2026.xlsx",
+    "reader": {
+      "format": "xlsx",
+      "delimiter": null,
+      "header": true,
+      "skip": 4,
+      "sheet_name": "Current_Victorian_Licences_By_L",
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 23036,
+    "agent_rows": 22036,
+    "validation_rows": 1000,
+    "column_count": 21
+  },
+  "columns": [
+    {
+      "name": "Licence Number",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5000,
+      "examples": [
+        "33769069",
+        "32372762",
+        "31953858",
+        "32303056",
+        "32805105"
+      ]
+    },
+    {
+      "name": "Licensee",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 4577,
+      "examples": [
+        "DRINK BRANDS AUSTRALIA PTY LTD",
+        "AMIR & MARYAM PTY LTD",
+        "THE GROWING PLATE PTY LTD",
+        "BRIGHTMORE AUS PTY LTD",
+        "FORBES MAC"
+      ]
+    },
+    {
+      "name": "Trading As",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0078,
+      "sample_distinct": 4674,
+      "examples": [
+        "DRINK BRANDS AUSTRALIA",
+        "DOUGH BROS",
+        "PIER STREET KITCHEN",
+        "MACHI",
+        "MAC FORBES WINES"
+      ]
+    },
+    {
+      "name": "Licence Category",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 13,
+      "examples": [
+        "Pre-retail Licence",
+        "Restaurant and cafe Licence",
+        "General Licence",
+        "Producer's Licence",
+        "Packaged Liquor Licence"
+      ]
+    },
+    {
+      "name": "Trading Hours",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 17,
+      "examples": [
+        "Pre-retail Licence",
+        "Trading to 1am",
+        "Producer's Licence",
+        "Ordinary",
+        "Limited Licence"
+      ]
+    },
+    {
+      "name": "Patron Capacity (if applicable)",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4368,
+      "sample_distinct": 560,
+      "examples": [
+        "42",
+        "50",
+        "52",
+        "148",
+        "198"
+      ]
+    },
+    {
+      "name": "Street Address",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0474,
+      "sample_distinct": 4682,
+      "examples": [
+        "SHOP 1 57 GEELONG ROAD",
+        "19 PIER STREET",
+        "14 INKERMAN STREET",
+        "770 KOO WEE RUP ROAD",
+        "52 FLINDERS STREET"
+      ]
+    },
+    {
+      "name": "Unnamed: 7",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 1.0,
+      "sample_distinct": 0,
+      "examples": []
+    },
+    {
+      "name": "Unnamed: 8",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 1.0,
+      "sample_distinct": 0,
+      "examples": []
+    },
+    {
+      "name": "Suburb",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0388,
+      "sample_distinct": 919,
+      "examples": [
+        "TORQUAY",
+        "DROMANA",
+        "ST KILDA",
+        "HEALESVILLE",
+        "MELBOURNE"
+      ]
+    },
+    {
+      "name": "Postcode",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0386,
+      "sample_distinct": 554,
+      "examples": [
+        "3228",
+        "3936",
+        "3182",
+        "3777",
+        "3000"
+      ]
+    },
+    {
+      "name": "Council",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0336,
+      "sample_distinct": 80,
+      "examples": [
+        "SURF COAST SHIRE COUNCIL",
+        "MORNINGTON PENINSULA SHIRE COUNCIL",
+        "PORT PHILLIP CITY COUNCIL",
+        "YARRA RANGES SHIRE COUNCIL",
+        "MELBOURNE CITY COUNCIL"
+      ]
+    },
+    {
+      "name": "Region",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0336,
+      "sample_distinct": 11,
+      "examples": [
+        "Barwon South-West",
+        "Metro South",
+        "Metro East",
+        "Metro North",
+        "Hume"
+      ]
+    },
+    {
+      "name": "Unnamed: 13",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 1.0,
+      "sample_distinct": 0,
+      "examples": []
+    },
+    {
+      "name": "Unnamed: 14",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 1.0,
+      "sample_distinct": 0,
+      "examples": []
+    },
+    {
+      "name": "Metro/Regional",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2,
+      "examples": [
+        "Regional",
+        "Metro"
+      ]
+    },
+    {
+      "name": "Latitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0462,
+      "sample_distinct": 4608,
+      "examples": [
+        "-38.32820695",
+        "-38.33302893",
+        "-37.86402487",
+        "-37.65386200",
+        "-37.81569349"
+      ]
+    },
+    {
+      "name": "Longitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0462,
+      "sample_distinct": 4620,
+      "examples": [
+        "144.31687748",
+        "144.96599490",
+        "144.98245290",
+        "145.51646200",
+        "144.97265927"
+      ]
+    },
+    {
+      "name": "Postal Address",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 4425,
+      "examples": [
+        "1/19 FLIGHT DRIVE",
+        "SHOP 1 57 GEELONG ROAD",
+        "19 PIER STREET DROMANA",
+        "25 GUILA COURT",
+        "PO BOX 1562"
+      ]
+    },
+    {
+      "name": "Postal Suburb",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1272,
+      "examples": [
+        "TULLAMARINE",
+        "TORQUAY",
+        "DROMANA",
+        "EPPING",
+        "HEALESVILLE"
+      ]
+    },
+    {
+      "name": "Postal Postcode",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 612,
+      "examples": [
+        "3043",
+        "3228",
+        "3936",
+        "3076",
+        "3777"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "Licence Number": "31100099",
+      "Licensee": "ARNOLD BRUCE",
+      "Trading As": "UNIVERSITY SKI CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "U S C LODGE ALLOTMENTS 15 & 16 ALPINE VILL",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MT BULLER",
+      "Postcode": "3723",
+      "Council": "MANSFIELD SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-37.14630500",
+      "Longitude": "146.45227600",
+      "Postal Address": "PO BOX 93",
+      "Postal Suburb": "SANDOWN VILLAGE",
+      "Postal Postcode": "3171"
+    },
+    {
+      "Licence Number": "31100138",
+      "Licensee": "C S I R SKI CLUB",
+      "Trading As": "C S I R SKI CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "SITE 65 1 SCHUSS STREET",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "FALLS CREEK",
+      "Postcode": "3699",
+      "Council": "ALPINE SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-36.86488200",
+      "Longitude": "147.27841300",
+      "Postal Address": "PO BOX 4077",
+      "Postal Suburb": "NARRE WARREN SOUTH",
+      "Postal Postcode": "3805"
+    },
+    {
+      "Licence Number": "31100154",
+      "Licensee": "SKILIB ALPINE CLUB",
+      "Trading As": "SKILIB ALPINE CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "2 GOAL POSTS RD",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MT BULLER",
+      "Postcode": "3723",
+      "Council": "MANSFIELD SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-37.14695700",
+      "Longitude": "146.45464800",
+      "Postal Address": "PO BOX 140",
+      "Postal Suburb": "CANTERBURY",
+      "Postal Postcode": "3126"
+    },
+    {
+      "Licence Number": "31100269",
+      "Licensee": "THEODOR HERZL SOCIAL CLUB",
+      "Trading As": "THEODOR HERZL SOCIAL CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "222 BALACLAVA RD",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "CAULFIELD",
+      "Postcode": "3162",
+      "Council": "GLEN EIRA CITY COUNCIL",
+      "Region": "Metro South",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Metro",
+      "Latitude": "-37.87230300",
+      "Longitude": "145.02319600",
+      "Postal Address": "222 BALACLAVA RD",
+      "Postal Suburb": "CAULFIELD",
+      "Postal Postcode": "3162"
+    },
+    {
+      "Licence Number": "31100277",
+      "Licensee": "GREYTHORN PARK TENNIS CLUB INC",
+      "Trading As": "GREYTHORN PARK TENNIS CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "FRANK AVE NORTH",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "BALWYN NORTH",
+      "Postcode": "3104",
+      "Council": "BOROONDARA CITY COUNCIL",
+      "Region": "Metro East",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Metro",
+      "Latitude": "-37.79734200",
+      "Longitude": "145.09382700",
+      "Postal Address": "P O BOX 1211G",
+      "Postal Suburb": "BALWYN NORTH",
+      "Postal Postcode": "3104"
+    },
+    {
+      "Licence Number": "31100609",
+      "Licensee": "OLOS CO-OPERATIVE SOCIETY LTD",
+      "Trading As": "SKI CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "51 STIRLING",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MT BULLER",
+      "Postcode": "3723",
+      "Council": "MANSFIELD SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-37.14700700",
+      "Longitude": "146.45289300",
+      "Postal Address": "G.P.O BOX 2506W",
+      "Postal Suburb": "MELBOURNE",
+      "Postal Postcode": "3001"
+    },
+    {
+      "Licence Number": "31100722",
+      "Licensee": "MELBOURNE WALKING CLUB INC",
+      "Trading As": "MELBOURNE WALKING CLUB INC",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "MT BULLER ALPINE VILLAGE",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MOUNT BULLER",
+      "Postcode": "3722",
+      "Council": "MANSFIELD SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-37.14671550",
+      "Longitude": "146.45046130",
+      "Postal Address": "J M PARIS 149 BANK ST",
+      "Postal Suburb": "SOUTH MELBOURNE",
+      "Postal Postcode": "3205"
+    },
+    {
+      "Licence Number": "31101037",
+      "Licensee": "W M NASH",
+      "Trading As": "VICTORIA POLICE ALPINE CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "LOT 7 BUTTERCUP RD",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MERRIJIG",
+      "Postcode": "3723",
+      "Council": "MANSFIELD SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-37.08333500",
+      "Longitude": "146.24405300",
+      "Postal Address": "THE SECRETARY PO BOX 33",
+      "Postal Suburb": "BLACKBURN SOUTH",
+      "Postal Postcode": "3130"
+    },
+    {
+      "Licence Number": "31101207",
+      "Licensee": "ARNOLD BRUCE",
+      "Trading As": "UNIVERSITY SKI CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "ALLOTMENT 5 SECTION B PARISH OF HOTHAM",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "MT HOTHAM",
+      "Postcode": "3741",
+      "Council": "ALPINE SHIRE COUNCIL",
+      "Region": "Hume",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Regional",
+      "Latitude": "-36.98654090",
+      "Longitude": "147.14991110",
+      "Postal Address": "PO BOX 93",
+      "Postal Suburb": "SANDOWN VILLAGE",
+      "Postal Postcode": "3171"
+    },
+    {
+      "Licence Number": "31101566",
+      "Licensee": "HASTINGS YACHT CLUB INC",
+      "Trading As": "HASTINGS YACHT CLUB",
+      "Licence Category": "BYO Permit",
+      "Trading Hours": "BYO Permit",
+      "Patron Capacity (if applicable)": null,
+      "Street Address": "FORESHORE",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Suburb": "HASTINGS",
+      "Postcode": "3915",
+      "Council": "MORNINGTON PENINSULA SHIRE COUNCIL",
+      "Region": "Metro South",
+      "Unnamed: 13": null,
+      "Unnamed: 14": null,
+      "Metro/Regional": "Metro",
+      "Latitude": "-38.31068200",
+      "Longitude": "145.19686500",
+      "Postal Address": "1 MARINE PARADE",
+      "Postal Suburb": "HASTINGS",
+      "Postal Postcode": "3915"
+    }
+  ]
+}

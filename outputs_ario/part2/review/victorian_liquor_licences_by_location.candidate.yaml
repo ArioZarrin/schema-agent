@@ -1,0 +1,162 @@
+config_version: '1.0'
+source:
+  dataset_id: 6f1cc305-a8b2-4748-bd40-c00754ad6504
+  dataset_title: Victorian liquor licences by location
+  resource_id: 3804ec54-9b8d-477e-899f-64d33b4e2521
+  resource_name: August 2026
+  resource_url: https://www.vic.gov.au/sites/default/files/2026-09/Current_Victorian_Licences_By_Location_31_August_2026.xlsx
+  resource_format: XLSX
+  publisher: Liquor Control Victoria
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2026-09-14T17:48:10.178976'
+  resource_last_modified: null
+reader:
+  format: xlsx
+  delimiter: null
+  header: true
+  skip: 4
+  sheet_name: Current_Victorian_Licences_By_L
+  record_tag: null
+  zip_member: null
+source_reliability: 0.9
+source_reliability_reason: Liquor Control Victoria is the relevant state regulator
+  and an authoritative source for liquor licensees, trading names, and licensed premises.
+  The dataset is explicitly a current licence list.
+mappings:
+- source_fields:
+  - Licence Number
+  target_field: observation.source_record_id
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.98
+  derivation_level: L0
+  reason: The licence number identifies the source record and is directly traceable
+    to the listed licence.
+- source_fields:
+  - Licensee
+  target_field: entity.legal_name
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.77
+  derivation_level: L0
+  reason: The named licensee is the primary licence holder name and the closest source-provided
+    equivalent to the entity's legal name, although some holders may be individuals.
+- source_fields:
+  - Trading As
+  target_field: entity.trading_name
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.96
+  derivation_level: L0
+  reason: The column explicitly provides the name the licensee trades as.
+- source_fields:
+  - Street Address
+  target_field: address.full
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.94
+  derivation_level: L0
+  reason: This is the street address of the licensed location.
+- source_fields:
+  - Suburb
+  target_field: address.locality
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.97
+  derivation_level: L0
+  reason: The suburb identifies the locality of the licensed location.
+- source_fields:
+  - Postcode
+  target_field: address.postcode
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.97
+  derivation_level: L0
+  reason: This is the postcode associated with the licensed location.
+- source_fields: []
+  target_field: address.state
+  transformation:
+    type: constant
+    expression: null
+    value: VIC
+  confidence: 0.99
+  derivation_level: L0
+  reason: The dataset covers Victorian liquor licences.
+- source_fields: []
+  target_field: address.country
+  transformation:
+    type: constant
+    expression: null
+    value: AU
+  confidence: 0.99
+  derivation_level: L0
+  reason: The dataset covers Victoria, Australia.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: 3804ec54-9b8d-477e-899f-64d33b4e2521
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: Licence Number
+  reason: Used as observation.source_record_id; it is not an entity attribute.
+- source_field: Licence Category
+  reason: Licence category is not an entity type or status in the ontology.
+- source_field: Trading Hours
+  reason: Trading hours are outside the available ontology fields.
+- source_field: Patron Capacity (if applicable)
+  reason: Patron capacity is outside the available ontology fields.
+- source_field: 'Unnamed: 7'
+  reason: Blank source column with no usable values.
+- source_field: 'Unnamed: 8'
+  reason: Blank source column with no usable values.
+- source_field: Council
+  reason: Council is an administrative area, not one of the available address fields.
+- source_field: Region
+  reason: Region is an administrative grouping, not one of the available address fields.
+- source_field: 'Unnamed: 13'
+  reason: Blank source column with no usable values.
+- source_field: 'Unnamed: 14'
+  reason: Blank source column with no usable values.
+- source_field: Metro/Regional
+  reason: Metro/regional classification is outside the available ontology fields.
+- source_field: Latitude
+  reason: Coordinates are outside the available ontology fields.
+- source_field: Longitude
+  reason: Coordinates are outside the available ontology fields.
+- source_field: Postal Address
+  reason: This is correspondence address information, not the licensed location address.
+- source_field: Postal Suburb
+  reason: This is the correspondence address locality, not the licensed location locality.
+- source_field: Postal Postcode
+  reason: This is the correspondence address postcode, not the licensed location postcode.
+research_notes: []
+agent_notes: []

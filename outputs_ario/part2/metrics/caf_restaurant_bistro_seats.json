@@ -1,0 +1,81 @@
+{
+  "mode": "normal",
+  "model_calls": 3,
+  "tool_calls": 0,
+  "validation_calls": 1,
+  "step_count": 4,
+  "input_tokens": 8891,
+  "output_tokens": 1789,
+  "total_tokens": 10680,
+  "estimated_cost_usd": null,
+  "wall_clock_seconds": 26.53,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "fb09c883-7139-494c-8adb-875dc7f26040",
+    "title": "Caf\u00e9, restaurant, bistro seats",
+    "slug": "caf_restaurant_bistro_seats",
+    "publisher": "City of Melbourne",
+    "part1_confidence": 0.3283
+  },
+  "resource_id": "cc7750fc-3c57-43c3-a5f5-c2af85db4c74",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "observation.source_record_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "entity.trading_name": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.full": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.industry_code": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 1000
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

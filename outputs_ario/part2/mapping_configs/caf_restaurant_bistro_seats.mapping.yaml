@@ -1,0 +1,138 @@
+config_version: '1.0'
+source:
+  dataset_id: fb09c883-7139-494c-8adb-875dc7f26040
+  dataset_title: Café, restaurant, bistro seats
+  resource_id: cc7750fc-3c57-43c3-a5f5-c2af85db4c74
+  resource_name: Café, restaurant, bistro seats CSV
+  resource_url: https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/cafes-and-restaurants-with-seating-capacity/exports/csv?delimiter=%2C
+  resource_format: CSV
+  publisher: City of Melbourne
+  licence: Other (Open)
+  metadata_modified: '2025-06-26T16:24:55.068044'
+  resource_last_modified: null
+reader:
+  format: csv
+  encoding: utf-8-sig
+  delimiter: null
+  header: true
+  skip: 0
+  sheet_name: null
+  record_tag: null
+  zip_member: null
+source_reliability: 0.8
+source_reliability_reason: City of Melbourne is an authoritative local-government
+  publisher for business seating and premises information within its municipality;
+  records may be historical census observations rather than current business status.
+mappings:
+- source_fields:
+  - property_id
+  - base_property_id
+  - block_id
+  - census_year
+  - building_address
+  - clue_small_area
+  - trading_name
+  - business_address
+  - industry_anzsic4_code
+  - industry_anzsic4_description
+  - seating_type
+  - number_of_seats
+  - longitude
+  - latitude
+  - location
+  target_field: observation.source_record_id
+  transformation:
+    type: record_hash
+    expression: null
+    value: null
+  confidence: 0.95
+  derivation_level: L1
+  reason: 'The dataset has no unique row key: property identifiers recur across census
+    years, businesses, and seating types. Hash the complete source row to provide
+    a deterministic, traceable record identifier.'
+- source_fields:
+  - trading_name
+  target_field: entity.trading_name
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.98
+  derivation_level: L0
+  reason: The column explicitly identifies the business trading name; it does not
+    establish the registered legal name.
+- source_fields:
+  - business_address
+  target_field: address.full
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.96
+  derivation_level: L0
+  reason: This is the address associated with the business and is the best match for
+    the full business address.
+- source_fields:
+  - industry_anzsic4_code
+  target_field: entity.industry_code
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.98
+  derivation_level: L0
+  reason: The source explicitly labels this as an ANZSIC 4-digit industry code; preserve
+    the raw code.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: cc7750fc-3c57-43c3-a5f5-c2af85db4c74
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Other (Open)
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: census_year
+  reason: A census year is not sufficient evidence of a registration or claim-validity
+    date.
+- source_field: block_id
+  reason: A municipal block identifier is not an entity identifier in the ontology.
+- source_field: property_id
+  reason: A property identifier is not a business or legal-entity identifier.
+- source_field: base_property_id
+  reason: A base property identifier is not a business or legal-entity identifier.
+- source_field: building_address
+  reason: This describes the building or property and is less directly attributable
+    to the business than business_address.
+- source_field: clue_small_area
+  reason: These values are municipal small-area labels, not reliably standardised
+    address localities.
+- source_field: industry_anzsic4_description
+  reason: The ontology has an industry-code field but no separate industry-description
+    field; the raw code is mapped.
+- source_field: seating_type
+  reason: Seating category is outside the Firmable entity and address ontology.
+- source_field: number_of_seats
+  reason: Seat count is outside the Firmable entity and address ontology.
+- source_field: longitude
+  reason: Coordinates are not represented in the Firmable ontology.
+- source_field: latitude
+  reason: Coordinates are not represented in the Firmable ontology.
+- source_field: location
+  reason: This is a coordinate pair, which is not represented in the Firmable ontology.
+research_notes: []
+agent_notes: []

@@ -1,0 +1,22 @@
+{
+  "stage": "rejected",
+  "reader_recovery": {
+    "original_path": "/Users/ario/Documents/firmable/outputs/part2/raw/annual_report_cbs/2017-18-consumer-and-business-services-associations-act_data.csv",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/state/reader_cache/annual_report_cbs/0559d4a542b2_2017-18-consumer-and-business-services-associations-act_data.csv",
+    "encoding": "cp1252",
+    "converted_to_utf8": true
+  },
+  "dataset": {
+    "dataset_id": "d8e12b1f-2abf-44e4-9531-6f19cc61144b",
+    "title": "Annual Report CBS",
+    "slug": "annual_report_cbs",
+    "publisher": "Attorney-General's Department",
+    "part1_confidence": 0.2668
+  },
+  "resource_id": "26031353-0d76-4c6b-8b52-71bdd4cfdc5d",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/annual_report_cbs/2017-18-consumer-and-business-services-associations-act_data.csv",
+  "source_table": "src_annual_report_cbs",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/annual_report_cbs.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/annual_report_cbs.candidate.yaml",
+  "updated_at": "2026-10-02T05:07:29.886078+00:00"
+}

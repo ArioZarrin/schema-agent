@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "dataset_id": "732d6bf3-2670-4226-9235-789bcf670288",
+    "title": "Business establishments location and industry classification",
+    "publisher": "City of Melbourne",
+    "resource_id": "b8575bd0-16d4-452e-a4ec-db48330e6356",
+    "resource_name": "Business establishments location and industry classification CSV",
+    "resource_format": "CSV",
+    "licence": "Other (Open)",
+    "metadata_modified": "2025-06-25T20:34:28.924632",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/business_establishments_location_and_industry_classification/Business_establishments_location_and_industry_classification_CSV.csv",
+    "reader": {
+      "format": "csv",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 413550,
+    "agent_rows": 412550,
+    "validation_rows": 1000,
+    "column_count": 12
+  },
+  "columns": [
+    {
+      "name": "census_year",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 23,
+      "examples": [
+        "2013",
+        "2024",
+        "2023",
+        "2021",
+        "2008"
+      ]
+    },
+    {
+      "name": "block_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 436,
+      "examples": [
+        "33",
+        "746",
+        "787",
+        "571",
+        "54"
+      ]
+    },
+    {
+      "name": "property_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2048,
+      "examples": [
+        "102125",
+        "110450",
+        "640580",
+        "602256",
+        "108104"
+      ]
+    },
+    {
+      "name": "base_property_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1888,
+      "examples": [
+        "102125",
+        "110437",
+        "640580",
+        "602256",
+        "108104"
+      ]
+    },
+    {
+      "name": "clue_small_area",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 13,
+      "examples": [
+        "Melbourne (CBD)",
+        "Southbank",
+        "Port Melbourne",
+        "Kensington",
+        "Carlton"
+      ]
+    },
+    {
+      "name": "trading_name",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0002,
+      "sample_distinct": 3799,
+      "examples": [
+        "Flight Centre Limited",
+        "Vacant",
+        "CASCONSTRUCT PTY LTD",
+        "Showgrounds Children's Centre",
+        "Leasing Melbourne"
+      ]
+    },
+    {
+      "name": "business_address",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 4647,
+      "examples": [
+        "Shop 1, Ground , 422 Collins Street MELBOURNE 3000",
+        "Part Level 1 111 Coventry Street SOUTHBANK VIC 3006",
+        "Part Level 1-2 24 Cook Street PORT MELBOURNE VIC 3207",
+        "Shop P2, Ground 320-380 Epsom Road FLEMINGTON VIC 3031",
+        "Part Level 5, 190 Queen Street MELBOURNE 3000"
+      ]
+    },
+    {
+      "name": "industry_anzsic4_code",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 313,
+      "examples": [
+        "7220",
+        "0000",
+        "3011",
+        "8710",
+        "6720"
+      ]
+    },
+    {
+      "name": "industry_anzsic4_description",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 313,
+      "examples": [
+        "Travel Agency and Tour Arrangement Services",
+        "Vacant Space",
+        "House Construction",
+        "Child Care Services",
+        "Real Estate Services"
+      ]
+    },
+    {
+      "name": "longitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0096,
+      "sample_distinct": 2649,
+      "examples": [
+        "144.959996472",
+        "144.966296035",
+        "144.914727663",
+        "144.915521176",
+        "144.960680401"
+      ]
+    },
+    {
+      "name": "latitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0096,
+      "sample_distinct": 2468,
+      "examples": [
+        "-37.81679183",
+        "-37.83070461",
+        "-37.83167194",
+        "-37.78257294",
+        "-37.81402844"
+      ]
+    },
+    {
+      "name": "point",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0096,
+      "sample_distinct": 2654,
+      "examples": [
+        "-37.81679183, 144.959996472",
+        "-37.83070461, 144.966296035",
+        "-37.83167194, 144.914727663",
+        "-37.78257294, 144.915521176",
+        "-37.81402844, 144.960680401"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101204",
+      "base_property_id": "101204",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Alfee Hair Design",
+      "business_address": "Shop 10, 194-200 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "9511",
+      "industry_anzsic4_description": "Hairdressing and Beauty Services",
+      "longitude": "144.9672862",
+      "latitude": "-37.81243254",
+      "point": "-37.81243254, 144.9672862"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101205",
+      "base_property_id": "101205",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Seminal Solutions",
+      "business_address": "Part Level 3, 190-192 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "7000",
+      "industry_anzsic4_description": "Computer System Design and Related Services",
+      "longitude": "144.967549713",
+      "latitude": "-37.81272055",
+      "point": "-37.81272055, 144.967549713"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101205",
+      "base_property_id": "101205",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Proactif Pty Ltd",
+      "business_address": "Part Level 4, 190-192 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "7000",
+      "industry_anzsic4_description": "Computer System Design and Related Services",
+      "longitude": "144.967549713",
+      "latitude": "-37.81272055",
+      "point": "-37.81272055, 144.967549713"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101205",
+      "base_property_id": "101205",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Francis Lhanh Solicitors",
+      "business_address": "Part Level 2, 190-192 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "6931",
+      "industry_anzsic4_description": "Legal Services",
+      "longitude": "144.967549713",
+      "latitude": "-37.81272055",
+      "point": "-37.81272055, 144.967549713"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101207",
+      "base_property_id": "101207",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Amusement Centre",
+      "business_address": "Part Ground , 186 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "9131",
+      "industry_anzsic4_description": "Amusement Parks and Centres Operation",
+      "longitude": "144.967697361",
+      "latitude": "-37.81267743",
+      "point": "-37.81267743, 144.967697361"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101208",
+      "base_property_id": "101208",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Jason Tan International",
+      "business_address": "Part Level 7, 180 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "6720",
+      "industry_anzsic4_description": "Real Estate Services",
+      "longitude": "144.967796206",
+      "latitude": "-37.81264829",
+      "point": "-37.81264829, 144.967796206"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101208",
+      "base_property_id": "101208",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Golden Horse Travel",
+      "business_address": "Part Floor 3, 180 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "7220",
+      "industry_anzsic4_description": "Travel Agency and Tour Arrangement Services",
+      "longitude": "144.967796206",
+      "latitude": "-37.81264829",
+      "point": "-37.81264829, 144.967796206"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "101208",
+      "base_property_id": "101208",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Vacant",
+      "business_address": "180-182 Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "0000",
+      "industry_anzsic4_description": "Vacant Space",
+      "longitude": "144.967796206",
+      "latitude": "-37.81264829",
+      "point": "-37.81264829, 144.967796206"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "105838",
+      "base_property_id": "105838",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Westlake Restaurant",
+      "business_address": "189-191 Little Bourke Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "longitude": "144.966964251",
+      "latitude": "-37.81219534",
+      "point": "-37.81219534, 144.966964251"
+    },
+    {
+      "census_year": "2002",
+      "block_id": "56",
+      "property_id": "108538",
+      "base_property_id": "108538",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Store 24",
+      "business_address": "165 Russell Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4111",
+      "industry_anzsic4_description": "Convenience Store",
+      "longitude": "144.96764258",
+      "latitude": "-37.81247306",
+      "point": "-37.81247306, 144.96764258"
+    }
+  ]
+}

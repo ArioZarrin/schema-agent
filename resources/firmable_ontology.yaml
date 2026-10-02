@@ -1,0 +1,127 @@
+# Firmable canonical ontology — assignment subset v0.1
+#
+# This is a deliberately small slice of the real ontology, enough to do the task.
+# Treat it as a contract: your mapping configs target these field names exactly.
+#
+# Two ideas matter here.
+#
+# 1. An OBSERVATION is a claim a source made at a point in time. It is not a fact.
+#    Five sources saying five different things about one company produce five
+#    observations, not one curated value. We reconcile later; you do not reconcile
+#    at ingest.
+#
+# 2. Confidence is not one number. "This record says ABC Pty Ltd", "this record is
+#    entity 874219" and "ABC is probably expanding" are different claims with
+#    different failure modes. Keep them apart.
+
+version: 0.1
+
+entity:
+  legal_name:
+    type: string
+    notes: As registered. Not the trading name.
+  trading_name:
+    type: string
+    notes: May be multiple. Emit one observation each.
+  abn:
+    type: string
+    pattern: '^\d{11}$'
+    notes: Australian Business Number. Has a checksum — validate it, do not just length-check.
+  acn:
+    type: string
+    pattern: '^\d{9}$'
+    notes: Australian Company Number. Also checksummed. The last 9 digits of an ABN are often the ACN, but not always.
+  nzbn:
+    type: string
+    pattern: '^\d{13}$'
+    notes: New Zealand Business Number, if you happen to hit an NZ source.
+  entity_type:
+    type: enum
+    values: [company, sole_trader, partnership, trust, incorporated_association, government, other, unknown]
+    notes: Default to unknown. Guessing here causes downstream harm.
+  status:
+    type: enum
+    values: [active, deregistered, in_liquidation, suspended, unknown]
+  website:
+    type: string
+  industry_code:
+    type: string
+    notes: ANZSIC where available. Record the raw source value too.
+  date_registered:
+    type: date
+
+address:
+  full:
+    type: string
+  locality:
+    type: string
+  state:
+    type: enum
+    values: [NSW, VIC, QLD, WA, SA, TAS, ACT, NT, NZ, OTHER]
+  postcode:
+    type: string
+  country:
+    type: string
+    default: AU
+
+# Every emitted record carries this envelope. No exceptions.
+observation:
+  source_id:
+    type: string
+    required: true
+    notes: Stable identifier for the dataset the claim came from.
+  source_record_id:
+    type: string
+    required: true
+    notes: Must be traceable back to the exact raw record. If the source has no key, construct a deterministic one and document how.
+  observed_at:
+    type: datetime
+    required: true
+    notes: When the source stated it.
+  ingested_at:
+    type: datetime
+    required: true
+    notes: When you read it. These are different and both matter.
+  valid_from:
+    type: date
+    notes: When the claim became true in the world, if the source says.
+  valid_to:
+    type: date
+    notes: Null means still current as far as this source knows.
+  licence:
+    type: string
+    required: true
+    notes: >
+      From the dataset metadata. CKAN exposes it. If a source has no clear licence,
+      that is a finding, not a blocker — record 'unknown' and flag it.
+  extractor_version:
+    type: string
+    required: true
+    notes: >
+      Which version of your mapping config and engine produced this. You will be
+      glad of it later.
+
+# Preserve these components separately on observations and links.
+# Part 4 additionally derives claim C = R * L * F using the agreed profile
+# scoring rule; that derived score does not replace the original components.
+confidence:
+  source_reliability:
+    type: float
+    range: [0, 1]
+    notes: How much do we trust this publisher on this kind of claim.
+  field_confidence:
+    type: float
+    range: [0, 1]
+    notes: How sure are we that we mapped and parsed this field correctly.
+  link_confidence:
+    type: float
+    range: [0, 1]
+    notes: How sure are we that this record refers to that entity. Only on links.
+
+# Optional: use it if it helps you, ignore it if not.
+derivation_level:
+  L0: A source stated it directly.
+  L1: We computed it deterministically from L0 (parsing, normalising, checksums).
+  L2: We derived it statistically.
+  L3: A model inferred it.
+  L4: Inference on top of inference. We cap this in production.

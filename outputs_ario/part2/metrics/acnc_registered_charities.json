@@ -1,0 +1,121 @@
+{
+  "mode": "normal",
+  "model_calls": 4,
+  "tool_calls": 0,
+  "validation_calls": 2,
+  "step_count": 6,
+  "input_tokens": 41488,
+  "output_tokens": 9145,
+  "total_tokens": 50633,
+  "estimated_cost_usd": null,
+  "wall_clock_seconds": 70.56,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "b050b242-4487-4306-abf5-07ca073e5594",
+    "title": "ACNC Registered Charities",
+    "slug": "acnc_registered_charities",
+    "publisher": "Australian Charities and Not-for-profits Commission (ACNC)",
+    "part1_confidence": 0.3929
+  },
+  "resource_id": "8fb32972-24e9-4c95-885e-7140be51be8a",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "entity.abn": {
+        "rows": 1000,
+        "non_null": 989,
+        "null_rate": 0.011,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_record_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "entity.legal_name": {
+        "rows": 1000,
+        "non_null": 997,
+        "null_rate": 0.003,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.full": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.locality": {
+        "rows": 1000,
+        "non_null": 877,
+        "null_rate": 0.123,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.state": {
+        "rows": 1000,
+        "non_null": 875,
+        "null_rate": 0.125,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.postcode": {
+        "rows": 1000,
+        "non_null": 877,
+        "null_rate": 0.123,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.country": {
+        "rows": 1000,
+        "non_null": 848,
+        "null_rate": 0.152,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.website": {
+        "rows": 1000,
+        "non_null": 663,
+        "null_rate": 0.337,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 1000
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

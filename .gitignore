@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Virtual environment
+.venv/
+
+# Tool caches
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Secrets
+.env
+
+# Local databases / runtime files
+*.duckdb
+*.duckdb.wal
+*.sqlite-shm
+*.sqlite-wal
+
+# Pre-analysis scratch data
+analysis/data/
+analysis/outputs/
+
+tests
+
+# Part 2 downloaded/runtime artifacts
+outputs/part2/raw/
+outputs/part2/sandbox/
+outputs/part2/workflow_checkpoints.sqlite*
+
+# Part 2 downloaded/runtime artifacts
+outputs_ario/part2/raw/
+outputs_ario/part2/sandbox/
+outputs_ario/part2/workflow_checkpoints.sqlite*

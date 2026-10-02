@@ -1,0 +1,148 @@
+config_version: '1.0'
+source:
+  dataset_id: 732d6bf3-2670-4226-9235-789bcf670288
+  dataset_title: Business establishments location and industry classification
+  resource_id: b8575bd0-16d4-452e-a4ec-db48330e6356
+  resource_name: Business establishments location and industry classification CSV
+  resource_url: https://data.melbourne.vic.gov.au/api/v2/catalog/datasets/business-establishments-with-address-and-industry-classification/exports/csv?delimiter=%2C
+  resource_format: CSV
+  publisher: City of Melbourne
+  licence: Other (Open)
+  metadata_modified: '2025-06-25T20:34:28.924632'
+  resource_last_modified: null
+reader:
+  format: csv
+  delimiter: null
+  header: true
+  skip: 0
+  sheet_name: null
+  record_tag: null
+  zip_member: null
+source_reliability: 0.82
+source_reliability_reason: The City of Melbourne is an official municipal publisher
+  and the dataset provides detailed establishment-level locations and ANZSIC classifications.
+  It is reliable as a local administrative dataset, but its establishment names and
+  classifications should not be treated as verified legal-entity records.
+mappings:
+- source_fields:
+  - trading_name
+  target_field: entity.trading_name
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.88
+  derivation_level: L0
+  reason: The source explicitly labels this field trading_name. Values such as "Vacant"
+    may describe a premises rather than an operating business, but are retained as
+    stated.
+- source_fields:
+  - business_address
+  target_field: address.full
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.95
+  derivation_level: L0
+  reason: This field contains the establishment's address as a single source-provided
+    string.
+- source_fields:
+  - industry_anzsic4_code
+  target_field: entity.industry_code
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L0
+  reason: The source field explicitly provides an ANZSIC four-digit industry code;
+    preserve its raw string value, including leading zeros.
+- source_fields: []
+  target_field: address.state
+  transformation:
+    type: constant
+    expression: null
+    value: VIC
+  confidence: 0.94
+  derivation_level: L1
+  reason: The dataset covers establishments within the City of Melbourne, in Victoria.
+- source_fields: []
+  target_field: address.country
+  transformation:
+    type: constant
+    expression: null
+    value: AU
+  confidence: 0.99
+  derivation_level: L1
+  reason: The dataset is published by the City of Melbourne, Australia.
+- source_fields:
+  - census_year
+  - block_id
+  - property_id
+  - base_property_id
+  - clue_small_area
+  - trading_name
+  - business_address
+  - industry_anzsic4_code
+  - industry_anzsic4_description
+  - longitude
+  - latitude
+  - point
+  target_field: observation.source_record_id
+  transformation:
+    type: record_hash
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L1
+  reason: No stable unique row key is evident. Hash all source columns to create a
+    deterministic identifier traceable to the exact source record.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: b8575bd0-16d4-452e-a4ec-db48330e6356
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Other (Open)
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: census_year
+  reason: A census or reference year is not a registration date or an observation
+    timestamp in the ontology.
+- source_field: block_id
+  reason: A municipal block identifier is not an entity identifier or a supported
+    address field.
+- source_field: property_id
+  reason: A property identifier identifies a premises, not necessarily a business
+    entity.
+- source_field: base_property_id
+  reason: A base property identifier identifies a premises, not necessarily a business
+    entity.
+- source_field: clue_small_area
+  reason: This is a broad administrative area label, not an unambiguous address locality.
+- source_field: industry_anzsic4_description
+  reason: The ontology has no industry-description field. The raw ANZSIC code is mapped
+    separately.
+- source_field: longitude
+  reason: The ontology has no coordinate field.
+- source_field: latitude
+  reason: The ontology has no coordinate field.
+- source_field: point
+  reason: This duplicates coordinate information, for which the ontology has no field.
+research_notes: []
+agent_notes: []

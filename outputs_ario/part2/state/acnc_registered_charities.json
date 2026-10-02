@@ -1,0 +1,18 @@
+{
+  "stage": "approved",
+  "dataset": {
+    "dataset_id": "b050b242-4487-4306-abf5-07ca073e5594",
+    "title": "ACNC Registered Charities",
+    "slug": "acnc_registered_charities",
+    "publisher": "Australian Charities and Not-for-profits Commission (ACNC)",
+    "part1_confidence": 0.3929
+  },
+  "resource_id": "8fb32972-24e9-4c95-885e-7140be51be8a",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/acnc_registered_charities/datadotgov_main.csv",
+  "source_table": "src_acnc_registered_charities",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/acnc_registered_charities.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/acnc_registered_charities.candidate.yaml",
+  "updated_at": "2026-10-02T03:40:49.537370+00:00",
+  "gold_table": "gold_acnc_registered_charities",
+  "rows": 1000
+}

@@ -1,0 +1,113 @@
+{
+  "mode": "normal",
+  "model_calls": 4,
+  "tool_calls": 0,
+  "validation_calls": 2,
+  "step_count": 6,
+  "input_tokens": 24249,
+  "output_tokens": 4200,
+  "total_tokens": 28449,
+  "estimated_cost_usd": null,
+  "wall_clock_seconds": 42.8,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "6f1cc305-a8b2-4748-bd40-c00754ad6504",
+    "title": "Victorian liquor licences by location",
+    "slug": "victorian_liquor_licences_by_location",
+    "publisher": "Liquor Control Victoria",
+    "part1_confidence": 0.3892
+  },
+  "resource_id": "3804ec54-9b8d-477e-899f-64d33b4e2521",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "observation.source_record_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "entity.legal_name": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.trading_name": {
+        "rows": 1000,
+        "non_null": 991,
+        "null_rate": 0.009,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.full": {
+        "rows": 1000,
+        "non_null": 960,
+        "null_rate": 0.04,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.locality": {
+        "rows": 1000,
+        "non_null": 968,
+        "null_rate": 0.032,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.postcode": {
+        "rows": 1000,
+        "non_null": 969,
+        "null_rate": 0.031,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.state": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.country": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 1000
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

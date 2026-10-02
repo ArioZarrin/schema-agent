@@ -1,0 +1,24 @@
+{
+  "stage": "approved",
+  "reader_recovery": {
+    "original_path": "/Users/ario/Documents/firmable/outputs/part2/raw/caf_restaurant_bistro_seats/Caf_restaurant_bistro_seats_CSV.csv",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/caf_restaurant_bistro_seats/Caf_restaurant_bistro_seats_CSV.csv",
+    "encoding": "utf-8-sig",
+    "converted_to_utf8": false
+  },
+  "dataset": {
+    "dataset_id": "fb09c883-7139-494c-8adb-875dc7f26040",
+    "title": "Caf\u00e9, restaurant, bistro seats",
+    "slug": "caf_restaurant_bistro_seats",
+    "publisher": "City of Melbourne",
+    "part1_confidence": 0.3283
+  },
+  "resource_id": "cc7750fc-3c57-43c3-a5f5-c2af85db4c74",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/caf_restaurant_bistro_seats/Caf_restaurant_bistro_seats_CSV.csv",
+  "source_table": "src_caf_restaurant_bistro_seats",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/caf_restaurant_bistro_seats.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/caf_restaurant_bistro_seats.candidate.yaml",
+  "updated_at": "2026-10-02T21:14:13.972972+00:00",
+  "gold_table": "gold_caf_restaurant_bistro_seats",
+  "rows": 1000
+}

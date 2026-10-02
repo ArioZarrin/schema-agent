@@ -1,0 +1,105 @@
+{
+  "mode": "normal",
+  "model_calls": 3,
+  "tool_calls": 0,
+  "validation_calls": 1,
+  "step_count": 4,
+  "input_tokens": 8882,
+  "output_tokens": 3693,
+  "total_tokens": 12575,
+  "estimated_cost_usd": null,
+  "wall_clock_seconds": 45.52,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "7b8656f9-606d-4337-af29-66b89b2eeefb",
+    "title": "ASIC - Company Dataset",
+    "slug": "asic_company",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "part1_confidence": 0.8364
+  },
+  "resource_id": "5c3914e6-413e-4a2c-b890-bf8efe3eabf2",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "entity.legal_name": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.acn": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.abn": {
+        "rows": 1000,
+        "non_null": 599,
+        "null_rate": 0.401,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.status": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.date_registered": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.valid_to": {
+        "rows": 1000,
+        "non_null": 42,
+        "null_rate": 0.958,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_record_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "observation.source_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 1000
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

@@ -1,0 +1,18 @@
+{
+  "stage": "approved",
+  "dataset": {
+    "dataset_id": "7b8656f9-606d-4337-af29-66b89b2eeefb",
+    "title": "ASIC - Company Dataset",
+    "slug": "asic_company",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "part1_confidence": 0.8364
+  },
+  "resource_id": "5c3914e6-413e-4a2c-b890-bf8efe3eabf2",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/asic_company/company_202609.csv",
+  "source_table": "src_asic_company",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/asic_company.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/asic_company.candidate.yaml",
+  "updated_at": "2026-10-02T03:31:06.674873+00:00",
+  "gold_table": "gold_asic_company",
+  "rows": 1000
+}

@@ -1,0 +1,1427 @@
+{
+  "metadata": {
+    "dataset_id": "b050b242-4487-4306-abf5-07ca073e5594",
+    "title": "ACNC Registered Charities",
+    "publisher": "Australian Charities and Not-for-profits Commission (ACNC)",
+    "resource_id": "8fb32972-24e9-4c95-885e-7140be51be8a",
+    "resource_name": "ACNC Register of Australian charities CSV",
+    "resource_format": "CSV",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-09-27T19:57:42.705209",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/acnc_registered_charities/datadotgov_main.csv",
+    "reader": {
+      "format": "csv",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 66399,
+    "agent_rows": 65399,
+    "validation_rows": 1000,
+    "column_count": 69
+  },
+  "columns": [
+    {
+      "name": "ABN",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0072,
+      "sample_distinct": 4964,
+      "examples": [
+        "48632436652",
+        "39631231251",
+        "91160701280",
+        "36684467418",
+        "62149285468"
+      ]
+    },
+    {
+      "name": "Charity_Legal_Name",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0028,
+      "sample_distinct": 4966,
+      "examples": [
+        "PARACHUTE FOR KIDS LTD",
+        "AUSTRALIA/ISRAEL & JEWISH AFFAIRS COUNCIL",
+        "Thread Together Limited",
+        "MERCY MISSION FOUNDATION AUSTRALIA LTD",
+        "Nathalia Gospel Trust"
+      ]
+    },
+    {
+      "name": "Other_Organisation_Names",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8968,
+      "sample_distinct": 516,
+      "examples": [
+        "St Josephs Catholic Sachsh Peak Hill",
+        "The Leaderscape",
+        "Civic Crew, Civic Industries, Civic Kitchen And Catering, Civic Lifestyles, New Era Independent Living Centre, Rec Ability",
+        "Pacific Island Council Tasmania Incorporated",
+        "Clive Hughes"
+      ]
+    },
+    {
+      "name": "Address_Type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1,
+      "examples": [
+        "Business"
+      ]
+    },
+    {
+      "name": "Address_Line_1",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1088,
+      "sample_distinct": 4093,
+      "examples": [
+        "21/1801 Botany Road",
+        "L 6 Se 4 402 Chapel Rd",
+        "875 Mardan Rd",
+        "165 Caswell St",
+        "Coronation Street"
+      ]
+    },
+    {
+      "name": "Address_Line_2",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9118,
+      "sample_distinct": 379,
+      "examples": [
+        "510 Lygon Street",
+        "1127 High Street",
+        "NSW",
+        "Hope Street",
+        "Sydney Square"
+      ]
+    },
+    {
+      "name": "Address_Line_3",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9894,
+      "sample_distinct": 47,
+      "examples": [
+        "245 Castlereagh Street",
+        "via",
+        "Bundoora",
+        "Fairfield East",
+        "197 Street George's Terrace"
+      ]
+    },
+    {
+      "name": "Town_City",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1082,
+      "sample_distinct": 2223,
+      "examples": [
+        "Banksmeadow",
+        "Bankstown",
+        "Mardan via Leongatha",
+        "Peak Hill",
+        "Bowraville"
+      ]
+    },
+    {
+      "name": "State",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.107,
+      "sample_distinct": 15,
+      "examples": [
+        "NSW",
+        "VIC",
+        "SA",
+        "QLD",
+        "WA"
+      ]
+    },
+    {
+      "name": "Postcode",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.107,
+      "sample_distinct": 1402,
+      "examples": [
+        "2019",
+        "2200",
+        "3953",
+        "2869",
+        "2449"
+      ]
+    },
+    {
+      "name": "Country",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1218,
+      "sample_distinct": 3,
+      "examples": [
+        "Australia",
+        "AUSTRALIA",
+        "NSW"
+      ]
+    },
+    {
+      "name": "Charity_Website",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.354,
+      "sample_distinct": 3171,
+      "examples": [
+        "https://www.parachute.org.au/",
+        "https://aijac.org.au/",
+        "threadtogether.org/",
+        "www.floodingcreek.com",
+        "scotspioneerchurchweebly.com"
+      ]
+    },
+    {
+      "name": "Registration_Date",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0038,
+      "sample_distinct": 1466,
+      "examples": [
+        "22/03/2019",
+        "01/02/2019",
+        "03/12/2012",
+        "17/07/2025",
+        "10/05/2023"
+      ]
+    },
+    {
+      "name": "Date_Organisation_Established",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0436,
+      "sample_distinct": 2132,
+      "examples": [
+        "22/03/2019",
+        "25/01/2019",
+        "09/11/2012",
+        "13/02/2025",
+        "01/01/1975"
+      ]
+    },
+    {
+      "name": "Charity_Size",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1116,
+      "sample_distinct": 3,
+      "examples": [
+        "Small",
+        "Large",
+        "Medium"
+      ]
+    },
+    {
+      "name": "Number_of_Responsible_Persons",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 24,
+      "examples": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "name": "Financial_Year_End",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0004,
+      "sample_distinct": 18,
+      "examples": [
+        "30-Jun",
+        "31-Dec",
+        "30-Apr",
+        "31-Jan",
+        "30-Sep"
+      ]
+    },
+    {
+      "name": "Operates_in_ACT",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9526,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_NSW",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7068,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_NT",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.958,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_QLD",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8222,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_SA",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9016,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_TAS",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9504,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_VIC",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7638,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operates_in_WA",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8822,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Operating_Countries",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.3208,
+      "sample_distinct": 166,
+      "examples": [
+        "AUS",
+        "AUS, ISR",
+        "MWI, ZAF, ZWE",
+        "FJI, KEN, KHM, PAK, TLS, UGA",
+        "AUS, PNG, TON"
+      ]
+    },
+    {
+      "name": "PBI",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8076,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "HPC",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9572,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Preventing_or_relieving_suffering_of_animals",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9782,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_Culture",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9066,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_Education",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8008,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_Health",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.889,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Promote_or_oppose_a_change_to_law__government_poll_or_prac",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9866,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_natual_environment",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9604,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Promoting_or_protecting_human_rights",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.987,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Purposes_beneficial_to_ther_general_public_and_other_analogous",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8846,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Promoting_reconciliation__mutual_respect_and_tolerance",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9756,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_Religion",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7242,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_social_or_public_welfare",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7798,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Advancing_security_or_safety_of_Australia_or_Australian_public",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9838,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Aboriginal_or_TSI",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7548,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Adults",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5658,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Aged_Persons",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.6012,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Children",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.6154,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Communities_Overseas",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9174,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Early_Childhood",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.737,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Ethnic_Groups",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7312,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Families",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.582,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Females",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.6576,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Financially_Disadvantaged",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7146,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "LGBTIQA+",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9774,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "General_Community_in_Australia",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.6084,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Males",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.681,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Migrants_Refugees_or_Asylum_Seekers",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9264,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Other_Beneficiaries",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9476,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Other_Charities",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8718,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "People_at_risk_of_homelessness",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8224,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "People_with_Chronic_Illness",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.849,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "People_with_Disabilities",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7512,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Pre_Post_Release_Offenders",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.93,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Rural_Regional_Remote_Communities",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7178,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Unemployed_Person",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8272,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Veterans_or_their_families",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.896,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Victims_of_crime",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.8988,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Victims_of_Disasters",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.906,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Youth",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5562,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "animals",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9564,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "environment",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9426,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "other_gender_identities",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9304,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "ABN": "20613885410",
+      "Charity_Legal_Name": "Marradhali Aboriginal Corporation",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "73 Taylor Street",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Dubbo",
+      "State": "NSW",
+      "Postcode": "2830",
+      "Country": "Australia",
+      "Charity_Website": "www.marradhali.com.au",
+      "Registration_Date": "11/10/2023",
+      "Date_Organisation_Established": "05/09/2023",
+      "Charity_Size": null,
+      "Number_of_Responsible_Persons": "5",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": "Y",
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": null,
+      "Operating_Countries": null,
+      "PBI": "Y",
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": "Y",
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": "Y",
+      "Adults": null,
+      "Aged_Persons": "Y",
+      "Children": "Y",
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": "Y",
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": "Y",
+      "Pre_Post_Release_Offenders": "Y",
+      "Rural_Regional_Remote_Communities": "Y",
+      "Unemployed_Person": "Y",
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "45629238500",
+      "Charity_Legal_Name": "Margate Family Op Shop Trust",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "32 Baynes St",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Margate",
+      "State": "QLD",
+      "Postcode": "4019",
+      "Country": "Australia",
+      "Charity_Website": "https://www.facebook.com/margateopshop/",
+      "Registration_Date": "28/02/2024",
+      "Date_Organisation_Established": "28/02/2024",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "1",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": "Y",
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": null,
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": "Y",
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": "Y",
+      "Aged_Persons": "Y",
+      "Children": "Y",
+      "Communities_Overseas": null,
+      "Early_Childhood": "Y",
+      "Ethnic_Groups": null,
+      "Families": "Y",
+      "Females": null,
+      "Financially_Disadvantaged": "Y",
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": "Y",
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": "Y",
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": "Y",
+      "Victims_of_Disasters": "Y",
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "72886162186",
+      "Charity_Legal_Name": "Jonahs Wings",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "44 Reigate Rd",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Highton",
+      "State": "VIC",
+      "Postcode": "3216",
+      "Country": "Australia",
+      "Charity_Website": "www.jonahswings.com.au",
+      "Registration_Date": "22/07/2024",
+      "Date_Organisation_Established": "22/07/2024",
+      "Charity_Size": null,
+      "Number_of_Responsible_Persons": "5",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": "Y",
+      "Operates_in_WA": null,
+      "Operating_Countries": null,
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": "Y",
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": null,
+      "Aged_Persons": null,
+      "Children": null,
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": null,
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": "Y",
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "57328293880",
+      "Charity_Legal_Name": "Donnybrook Mens Shed Incorporated",
+      "Other_Organisation_Names": "Donnybrook Men's Shed Inc.",
+      "Address_Type": "Business",
+      "Address_Line_1": "Egan Park",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "DONNYBROOK",
+      "State": "WA",
+      "Postcode": "6239",
+      "Country": "Australia",
+      "Charity_Website": null,
+      "Registration_Date": "21/06/2024",
+      "Date_Organisation_Established": "31/07/2014",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "5",
+      "Financial_Year_End": "28-Feb",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": "Y",
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": "Y",
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": null,
+      "Aged_Persons": "Y",
+      "Children": null,
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": null,
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": "Y",
+      "Males": "Y",
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": "Y",
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": "Y",
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": null,
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "93812216359",
+      "Charity_Legal_Name": "Local Spiritual Assembly of the Baha'is of Armadale",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "Po Box 576",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Armadale",
+      "State": "WA",
+      "Postcode": "6992",
+      "Country": "Australia",
+      "Charity_Website": "https://armadale.wa.bahai.org.au/",
+      "Registration_Date": "04/01/2024",
+      "Date_Organisation_Established": "21/04/2002",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "9",
+      "Financial_Year_End": "31-Mar",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": "Y",
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": "Y",
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": "Y",
+      "Aged_Persons": "Y",
+      "Children": "Y",
+      "Communities_Overseas": null,
+      "Early_Childhood": "Y",
+      "Ethnic_Groups": null,
+      "Families": "Y",
+      "Females": "Y",
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": "Y",
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": "Y"
+    },
+    {
+      "ABN": "84769492637",
+      "Charity_Legal_Name": "THINK OF THE FIVE ARRIVE ALIVE INCORPORATED",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "35 Myrtle Creek Ave",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Tahmoor",
+      "State": "NSW",
+      "Postcode": "2573",
+      "Country": "Australia",
+      "Charity_Website": null,
+      "Registration_Date": "06/11/2024",
+      "Date_Organisation_Established": "04/12/2024",
+      "Charity_Size": null,
+      "Number_of_Responsible_Persons": "12",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": "Y",
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": null,
+      "Operating_Countries": null,
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": "Y",
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": "Y",
+      "Aboriginal_or_TSI": null,
+      "Adults": "Y",
+      "Aged_Persons": "Y",
+      "Children": "Y",
+      "Communities_Overseas": null,
+      "Early_Childhood": "Y",
+      "Ethnic_Groups": null,
+      "Families": "Y",
+      "Females": null,
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": "Y",
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": "Y",
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "24646991915",
+      "Charity_Legal_Name": "Mahamevnawa Jethawanaya Buddhist Monastery Limited",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "417 Belgrave-hallam Rd",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Narre Warren North",
+      "State": "VIC",
+      "Postcode": "3804",
+      "Country": "Australia",
+      "Charity_Website": "https://jethawana.org.au/en/about-us/",
+      "Registration_Date": "07/01/2021",
+      "Date_Organisation_Established": "07/01/2021",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "7",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": "Y",
+      "Operates_in_WA": null,
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": "Y",
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": "Y",
+      "Aged_Persons": "Y",
+      "Children": null,
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": "Y",
+      "Families": "Y",
+      "Females": "Y",
+      "Financially_Disadvantaged": "Y",
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": "Y",
+      "Males": "Y",
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": "Y",
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": "Y"
+    },
+    {
+      "ABN": "34363156657",
+      "Charity_Legal_Name": "The Trustee for The Lewis Family Foundation",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": null,
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": null,
+      "State": null,
+      "Postcode": null,
+      "Country": null,
+      "Charity_Website": null,
+      "Registration_Date": "29/04/2021",
+      "Date_Organisation_Established": "29/04/2021",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "6",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": "Y",
+      "Operates_in_WA": null,
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": "Y",
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": null,
+      "Aged_Persons": null,
+      "Children": null,
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": null,
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": "Y",
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": null,
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": null,
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "58144836077",
+      "Charity_Legal_Name": "The Trustee for Invasive Species Solutions Trust",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "Building 101",
+      "Address_Line_2": "2-40 Clunies Ross Street",
+      "Address_Line_3": null,
+      "Town_City": "Acton",
+      "State": "ACT",
+      "Postcode": "2601",
+      "Country": "Australia",
+      "Charity_Website": "www.invasives.com.au",
+      "Registration_Date": "01/07/2021",
+      "Date_Organisation_Established": "16/09/2020",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "6",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": null,
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": null,
+      "Operating_Countries": "AUS",
+      "PBI": null,
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": null,
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": "Y",
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": null,
+      "Adults": "Y",
+      "Aged_Persons": null,
+      "Children": null,
+      "Communities_Overseas": null,
+      "Early_Childhood": null,
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": null,
+      "Financially_Disadvantaged": null,
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": "Y",
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": null,
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": "Y",
+      "Unemployed_Person": null,
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": null,
+      "animals": "Y",
+      "environment": "Y",
+      "other_gender_identities": null
+    },
+    {
+      "ABN": "12650045453",
+      "Charity_Legal_Name": "PASS TO ME LIMITED",
+      "Other_Organisation_Names": null,
+      "Address_Type": "Business",
+      "Address_Line_1": "L 9 53 Martin Pl",
+      "Address_Line_2": null,
+      "Address_Line_3": null,
+      "Town_City": "Sydney",
+      "State": "NSW",
+      "Postcode": "2000",
+      "Country": "Australia",
+      "Charity_Website": "http://www.passtome.com.au",
+      "Registration_Date": "10/05/2021",
+      "Date_Organisation_Established": "10/05/2021",
+      "Charity_Size": "Small",
+      "Number_of_Responsible_Persons": "5",
+      "Financial_Year_End": "30-Jun",
+      "Operates_in_ACT": null,
+      "Operates_in_NSW": "Y",
+      "Operates_in_NT": null,
+      "Operates_in_QLD": null,
+      "Operates_in_SA": null,
+      "Operates_in_TAS": null,
+      "Operates_in_VIC": null,
+      "Operates_in_WA": null,
+      "Operating_Countries": "AUS",
+      "PBI": "Y",
+      "HPC": null,
+      "Preventing_or_relieving_suffering_of_animals": null,
+      "Advancing_Culture": null,
+      "Advancing_Education": null,
+      "Advancing_Health": "Y",
+      "Promote_or_oppose_a_change_to_law__government_poll_or_prac": null,
+      "Advancing_natual_environment": null,
+      "Promoting_or_protecting_human_rights": null,
+      "Purposes_beneficial_to_ther_general_public_and_other_analogous": null,
+      "Promoting_reconciliation__mutual_respect_and_tolerance": null,
+      "Advancing_Religion": null,
+      "Advancing_social_or_public_welfare": null,
+      "Advancing_security_or_safety_of_Australia_or_Australian_public": null,
+      "Aboriginal_or_TSI": "Y",
+      "Adults": null,
+      "Aged_Persons": null,
+      "Children": "Y",
+      "Communities_Overseas": null,
+      "Early_Childhood": "Y",
+      "Ethnic_Groups": null,
+      "Families": null,
+      "Females": null,
+      "Financially_Disadvantaged": "Y",
+      "LGBTIQA+": null,
+      "General_Community_in_Australia": null,
+      "Males": null,
+      "Migrants_Refugees_or_Asylum_Seekers": null,
+      "Other_Beneficiaries": null,
+      "Other_Charities": null,
+      "People_at_risk_of_homelessness": "Y",
+      "People_with_Chronic_Illness": null,
+      "People_with_Disabilities": null,
+      "Pre_Post_Release_Offenders": null,
+      "Rural_Regional_Remote_Communities": "Y",
+      "Unemployed_Person": "Y",
+      "Veterans_or_their_families": null,
+      "Victims_of_crime": null,
+      "Victims_of_Disasters": null,
+      "Youth": "Y",
+      "animals": null,
+      "environment": null,
+      "other_gender_identities": null
+    }
+  ]
+}

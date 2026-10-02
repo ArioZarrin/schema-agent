@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "dataset_id": "fb09c883-7139-494c-8adb-875dc7f26040",
+    "title": "Café, restaurant, bistro seats",
+    "publisher": "City of Melbourne",
+    "resource_id": "cc7750fc-3c57-43c3-a5f5-c2af85db4c74",
+    "resource_name": "Café, restaurant, bistro seats CSV",
+    "resource_format": "CSV",
+    "licence": "Other (Open)",
+    "metadata_modified": "2025-06-26T16:24:55.068044",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/caf_restaurant_bistro_seats/Caf_restaurant_bistro_seats_CSV.csv",
+    "reader": {
+      "format": "csv",
+      "encoding": "utf-8-sig",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 66356,
+    "agent_rows": 65356,
+    "validation_rows": 1000,
+    "column_count": 15
+  },
+  "columns": [
+    {
+      "name": "census_year",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 23,
+      "examples": [
+        "2005",
+        "2008",
+        "2016",
+        "2009",
+        "2017"
+      ]
+    },
+    {
+      "name": "block_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 305,
+      "examples": [
+        "68",
+        "76",
+        "203",
+        "246",
+        "45"
+      ]
+    },
+    {
+      "name": "property_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1448,
+      "examples": [
+        "108989",
+        "589841",
+        "103123",
+        "106111",
+        "101142"
+      ]
+    },
+    {
+      "name": "base_property_id",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1368,
+      "examples": [
+        "108989",
+        "105749",
+        "103123",
+        "106111",
+        "101142"
+      ]
+    },
+    {
+      "name": "building_address",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2005,
+      "examples": [
+        "199-207 Spring Street MELBOURNE 3000",
+        "221 Little Lonsdale Street MELBOURNE 3000",
+        "258 Elgin Street CARLTON 3053",
+        "197 Lygon Street CARLTON 3053",
+        "309-325 Bourke Street MELBOURNE 3000"
+      ]
+    },
+    {
+      "name": "clue_small_area",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 13,
+      "examples": [
+        "Melbourne (CBD)",
+        "Carlton",
+        "North Melbourne",
+        "West Melbourne (Residential)",
+        "Docklands"
+      ]
+    },
+    {
+      "name": "trading_name",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2947,
+      "examples": [
+        "Hudson's Coffee",
+        "Expresso Bagels",
+        "Cafe Sua Da",
+        "Gelatissimo Carlton",
+        "Star Walk Cafe"
+      ]
+    },
+    {
+      "name": "business_address",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 3136,
+      "examples": [
+        "Shop 3, 201 Spring Street MELBOURNE 3000",
+        "28-32 Little Lonsdale Street MELBOURNE 3000",
+        "258 Elgin Street CARLTON 3053",
+        "197 Lygon Street CARLTON 3053",
+        "Shop 33, 309-325 Bourke Street MELBOURNE 3000"
+      ]
+    },
+    {
+      "name": "industry_anzsic4_code",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 45,
+      "examples": [
+        "4511",
+        "4512",
+        "4520",
+        "4400",
+        "1174"
+      ]
+    },
+    {
+      "name": "industry_anzsic4_description",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 45,
+      "examples": [
+        "Cafes and Restaurants",
+        "Takeaway Food Services",
+        "Pubs, Taverns and Bars",
+        "Accommodation",
+        "Bakery Product Manufacturing (Non-factory based)"
+      ]
+    },
+    {
+      "name": "seating_type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2,
+      "examples": [
+        "Seats - Outdoor",
+        "Seats - Indoor"
+      ]
+    },
+    {
+      "name": "number_of_seats",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 189,
+      "examples": [
+        "6",
+        "28",
+        "18",
+        "40",
+        "16"
+      ]
+    },
+    {
+      "name": "longitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0074,
+      "sample_distinct": 2342,
+      "examples": [
+        "144.972068819",
+        "144.965703405",
+        "144.965543359",
+        "144.966649881",
+        "144.964541708"
+      ]
+    },
+    {
+      "name": "latitude",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0074,
+      "sample_distinct": 2088,
+      "examples": [
+        "-37.81012834",
+        "-37.810658",
+        "-37.7967085",
+        "-37.8010174",
+        "-37.8144554"
+      ]
+    },
+    {
+      "name": "location",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0074,
+      "sample_distinct": 2348,
+      "examples": [
+        "-37.81012834, 144.972068819",
+        "-37.810658, 144.965703405",
+        "-37.7967085, 144.965543359",
+        "-37.8010174, 144.966649881",
+        "-37.8144554, 144.964541708"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "census_year": "2007",
+      "block_id": "13",
+      "property_id": "110151",
+      "base_property_id": "110151",
+      "building_address": "22-38 William Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Cafe 22",
+      "business_address": "Part Ground , 22 William Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "75",
+      "longitude": "144.959974759",
+      "latitude": "-37.8187779",
+      "location": "-37.8187779, 144.959974759"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "103166",
+      "base_property_id": "103166",
+      "building_address": "7-9 Elizabeth Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Pepperoni's",
+      "business_address": "7A Elizabeth Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "70",
+      "longitude": "144.964559723",
+      "latitude": "-37.81793319",
+      "location": "-37.81793319, 144.964559723"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "103167",
+      "base_property_id": "103167",
+      "building_address": "11-15 Elizabeth Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "McDonald's",
+      "business_address": "11-15 Elizabeth Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Outdoor",
+      "number_of_seats": "12",
+      "longitude": "144.964509018",
+      "latitude": "-37.81783056",
+      "location": "-37.81783056, 144.964509018"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "104004",
+      "base_property_id": "104004",
+      "building_address": "342-348 Flinders Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Aria Cafe",
+      "business_address": "Part Ground , 342-348 Flinders Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "30",
+      "longitude": "144.963085709",
+      "latitude": "-37.81845283",
+      "location": "-37.81845283, 144.963085709"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "104008",
+      "base_property_id": "104008",
+      "building_address": "292-298 Flinders Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Vita Juice Energy For Life",
+      "business_address": "298 Flinders Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4512",
+      "industry_anzsic4_description": "Takeaway Food Services",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "11",
+      "longitude": "144.964363152",
+      "latitude": "-37.81807623",
+      "location": "-37.81807623, 144.964363152"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "104008",
+      "base_property_id": "104008",
+      "building_address": "292-298 Flinders Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Kimchi Tray",
+      "business_address": "294 Flinders Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "40",
+      "longitude": "144.964363152",
+      "latitude": "-37.81807623",
+      "location": "-37.81807623, 144.964363152"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "108114",
+      "base_property_id": "108114",
+      "building_address": "28-38 Queen Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Hudsons Coffee",
+      "business_address": "Ground , 359-365 Queen Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "22",
+      "longitude": "144.962446939",
+      "latitude": "-37.81799108",
+      "location": "-37.81799108, 144.962446939"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "108114",
+      "base_property_id": "108114",
+      "building_address": "28-38 Queen Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Cafe 34",
+      "business_address": "Shop 2, 34 Queen Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "42",
+      "longitude": "144.962446939",
+      "latitude": "-37.81799108",
+      "location": "-37.81799108, 144.962446939"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "14",
+      "property_id": "108115",
+      "base_property_id": "108115",
+      "building_address": "20-26 Queen Street MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Maha Bar & Grill",
+      "business_address": "Basement , 21-27 Queen Street MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Outdoor",
+      "number_of_seats": "20",
+      "longitude": "144.962539312",
+      "latitude": "-37.8181941",
+      "location": "-37.8181941, 144.962539312"
+    },
+    {
+      "census_year": "2007",
+      "block_id": "15",
+      "property_id": "103326",
+      "base_property_id": "103326",
+      "building_address": "281-291 Flinders Lane MELBOURNE 3000",
+      "clue_small_area": "Melbourne (CBD)",
+      "trading_name": "Migo's",
+      "business_address": "Shop 2, 289 Flinders Lane MELBOURNE 3000",
+      "industry_anzsic4_code": "4511",
+      "industry_anzsic4_description": "Cafes and Restaurants",
+      "seating_type": "Seats - Indoor",
+      "number_of_seats": "16",
+      "longitude": "144.964977252",
+      "latitude": "-37.81719157",
+      "location": "-37.81719157, 144.964977252"
+    }
+  ]
+}

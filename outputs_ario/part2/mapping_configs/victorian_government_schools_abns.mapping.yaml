@@ -1,0 +1,109 @@
+config_version: '1.0'
+source:
+  dataset_id: 1ca29b03-220d-4c19-b34e-c7932cd4508d
+  dataset_title: Victorian Government Schools ABNs
+  resource_id: e70e6e0b-1a62-456b-a3d1-cd8f7508b54f
+  resource_name: Victorian Government Schools ABNs
+  resource_url: http://www.education.vic.gov.au/Documents/about/research/datavic/dv183-schoolABNdetails.xlsx
+  resource_format: XLSX
+  publisher: Department of Education
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2025-06-25T17:38:22.490113'
+  resource_last_modified: null
+reader:
+  format: xlsx
+  delimiter: null
+  header: true
+  skip: 0
+  sheet_name: Sheet1
+  record_tag: null
+  zip_member: null
+source_reliability: 0.95
+source_reliability_reason: 'The Victorian Department of Education is authoritative
+  for its school records. Reliability applies to the historical extract, not present-day
+  ABN status: all accessible financial-period values are 201506 and source-system
+  load timestamps are in July 2015.'
+mappings:
+- source_fields:
+  - ABN
+  target_field: entity.abn
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN regexp_full_match(regexp_replace(trim("ABN"), '\s', '',
+      'g'), '[0-9]{11}') AND list_sum(list_transform(range(1,12), i -> (try_cast(substr(regexp_replace(trim("ABN"),
+      '\s', '', 'g'),i,1) AS INTEGER) - CASE WHEN i = 1 THEN 1 ELSE 0 END) * list_extract([10,1,3,5,7,9,11,13,15,17,19],i)))
+      % 89 = 0 THEN regexp_replace(trim("ABN"), '\s', '', 'g') ELSE NULL END
+    value: null
+  confidence: 0.99
+  derivation_level: L1
+  reason: 'Explicit ABN field. Strip whitespace, require exactly eleven ASCII digits,
+    subtract one from the first digit, and validate the weighted sum modulo 89 using
+    weights 10,1,3,5,7,9,11,13,15,17,19. Emit NULL for failures; never pad or infer
+    identifiers. Tested on all 1232 accessible rows: 1220 pass and 12 malformed values
+    are rejected.'
+- source_fields:
+  - SchoolNumber
+  target_field: observation.source_record_id
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L0
+  reason: Source-issued school key retained verbatim as a string. All 1232 accessible
+    rows have nonblank unique keys; previous held-out validation also showed all 308
+    keys populated and unique. Scoped by observation.source_id; no business identifier
+    is inferred.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: e70e6e0b-1a62-456b-a3d1-cd8f7508b54f
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: SchoolNumber
+  reason: 'Checked: used verbatim for observation.source_record_id above, not discarded.
+    Listed here to explicitly account for the source column in the validator''s entity-field
+    accounting; no ontology entity field represents a school number, and it must not
+    be treated as an ABN, ACN or NZBN.'
+- source_field: SchoolName
+  reason: 'Checked: all accessible names are nonblank and distinct, but a school label
+    does not establish the registered legal name or trading name of the ABN holder.
+    Retain in raw provenance without mapping to either entity name field.'
+- source_field: Fin_Period
+  reason: 'Checked: all accessible rows contain 201506. This financial-period code
+    does not establish entity registration, observation time or exact claim validity
+    boundaries. Do not invent dates.'
+- source_field: LoadDate
+  reason: 'Checked: all 1232 accessible values parse as timestamps, spanning 2015-07-02
+    to 2015-07-31. A source-system load time is not proven to be the publisher''s
+    assertion time, ingestion time in Firmable, registration date or claim-validity
+    boundary. Retain raw; do not assign unsupported timestamp semantics.'
+research_notes: []
+agent_notes:
+- All five source fields were reviewed using the supplied profiles and read-only queries
+  over the 1232 accessible rows; held-out rows were not queried.
+- Preserve runtime ingestion-time and extractor-version provenance. The current observed_at
+  fallback to ingestion time is not evidence of when this historical source stated
+  its claims; metadata_modified in 2025 also does not establish freshness of 2015
+  records. Keep this temporal limitation explicit.
+- No ACN is derived from an ABN suffix; no entity type, active status, location or
+  industry is inferred from the school dataset title.
+- SchoolNumber is intentionally included in unmapped_fields solely to resolve the
+  reported accounting error while retaining its existing provenance mapping.

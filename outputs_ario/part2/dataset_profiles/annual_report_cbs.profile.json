@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "dataset_id": "d8e12b1f-2abf-44e4-9531-6f19cc61144b",
+    "title": "Annual Report CBS",
+    "publisher": "Attorney-General's Department",
+    "resource_id": "26031353-0d76-4c6b-8b52-71bdd4cfdc5d",
+    "resource_name": "Associations Act data",
+    "resource_format": "XLSX",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2025-06-25T15:19:06.795251",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/annual_report_cbs/2017-18-consumer-and-business-services-associations-act_data.csv",
+    "reader": {
+      "format": "csv",
+      "encoding": "cp1252",
+      "delimiter": ",",
+      "header": true,
+      "skip": 1,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 7,
+    "agent_rows": 6,
+    "validation_rows": 1,
+    "column_count": 5
+  },
+  "columns": [
+    {
+      "name": "S9—Annual report",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 6,
+      "examples": [
+        "Incorporated associations on the register",
+        "Associations",
+        "# Reporting systems changed significantly in 2015-16 and therefore previous data is available from https://www.cbs.sa.gov.au/about/ prior to 2015-16",
+        "Incorporated during the year",
+        "De-registered and wound-up"
+      ]
+    },
+    {
+      "name": "column1",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1667,
+      "sample_distinct": 5,
+      "examples": [
+        "20904",
+        "2017-18",
+        "297",
+        "76",
+        "286"
+      ]
+    },
+    {
+      "name": "column2",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1667,
+      "sample_distinct": 5,
+      "examples": [
+        "20697",
+        "2016-17",
+        "306",
+        "88",
+        "584"
+      ]
+    },
+    {
+      "name": "column3",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1667,
+      "sample_distinct": 5,
+      "examples": [
+        "20533",
+        "2015-16",
+        "341",
+        "100",
+        "610"
+      ]
+    },
+    {
+      "name": "column4",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.1667,
+      "sample_distinct": 2,
+      "examples": [
+        "#",
+        "2014-15"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "S9—Annual report": "Associations",
+      "column1": "2017-18",
+      "column2": "2016-17",
+      "column3": "2015-16",
+      "column4": "2014-15"
+    },
+    {
+      "S9—Annual report": "Incorporated associations on the register",
+      "column1": "20904",
+      "column2": "20697",
+      "column3": "20533",
+      "column4": "#"
+    },
+    {
+      "S9—Annual report": "Incorporated during the year",
+      "column1": "297",
+      "column2": "306",
+      "column3": "341",
+      "column4": "#"
+    },
+    {
+      "S9—Annual report": "De-registered and wound-up",
+      "column1": "76",
+      "column2": "88",
+      "column3": "100",
+      "column4": "#"
+    },
+    {
+      "S9—Annual report": "Periodic returns lodged",
+      "column1": "286",
+      "column2": "584",
+      "column3": "610",
+      "column4": "#"
+    },
+    {
+      "S9—Annual report": "# Reporting systems changed significantly in 2015-16 and therefore previous data is available from https://www.cbs.sa.gov.au/about/ prior to 2015-16",
+      "column1": null,
+      "column2": null,
+      "column3": null,
+      "column4": null
+    }
+  ]
+}

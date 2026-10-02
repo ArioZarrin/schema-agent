@@ -1,0 +1,354 @@
+config_version: '1.0'
+source:
+  dataset_id: b050b242-4487-4306-abf5-07ca073e5594
+  dataset_title: ACNC Registered Charities
+  resource_id: 8fb32972-24e9-4c95-885e-7140be51be8a
+  resource_name: ACNC Register of Australian charities CSV
+  resource_url: https://data.gov.au/data/dataset/b050b242-4487-4306-abf5-07ca073e5594/resource/8fb32972-24e9-4c95-885e-7140be51be8a/download/datadotgov_main.csv
+  resource_format: CSV
+  publisher: Australian Charities and Not-for-profits Commission (ACNC)
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2026-09-27T19:57:42.705209'
+  resource_last_modified: '2026-09-27T19:00:35.049480'
+reader:
+  format: csv
+  delimiter: null
+  header: true
+  skip: 0
+  sheet_name: null
+  record_tag: null
+  zip_member: null
+source_reliability: 0.98
+source_reliability_reason: Published by the Australian Charities and Not-for-profits
+  Commission, the Australian regulator maintaining this register.
+mappings:
+- source_fields:
+  - ABN
+  target_field: entity.abn
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 1.0
+  derivation_level: L0
+  reason: Explicit ABN field; the deterministic identifier check reports all 5,000
+    sampled non-null values as valid.
+- source_fields:
+  - ABN
+  - Charity_Legal_Name
+  - Other_Organisation_Names
+  - Address_Type
+  - Address_Line_1
+  - Address_Line_2
+  - Address_Line_3
+  - Town_City
+  - State
+  - Postcode
+  - Country
+  - Charity_Website
+  - Registration_Date
+  - Date_Organisation_Established
+  - Charity_Size
+  - Number_of_Responsible_Persons
+  - Financial_Year_End
+  - Operates_in_ACT
+  - Operates_in_NSW
+  - Operates_in_NT
+  - Operates_in_QLD
+  - Operates_in_SA
+  - Operates_in_TAS
+  - Operates_in_VIC
+  - Operates_in_WA
+  - Operating_Countries
+  - PBI
+  - HPC
+  - Preventing_or_relieving_suffering_of_animals
+  - Advancing_Culture
+  - Advancing_Education
+  - Advancing_Health
+  - Promote_or_oppose_a_change_to_law__government_poll_or_prac
+  - Advancing_natual_environment
+  - Promoting_or_protecting_human_rights
+  - Purposes_beneficial_to_ther_general_public_and_other_analogous
+  - Promoting_reconciliation__mutual_respect_and_tolerance
+  - Advancing_Religion
+  - Advancing_social_or_public_welfare
+  - Advancing_security_or_safety_of_Australia_or_Australian_public
+  - Aboriginal_or_TSI
+  - Adults
+  - Aged_Persons
+  - Children
+  - Communities_Overseas
+  - Early_Childhood
+  - Ethnic_Groups
+  - Families
+  - Females
+  - Financially_Disadvantaged
+  - LGBTIQA+
+  - General_Community_in_Australia
+  - Males
+  - Migrants_Refugees_or_Asylum_Seekers
+  - Other_Beneficiaries
+  - Other_Charities
+  - People_at_risk_of_homelessness
+  - People_with_Chronic_Illness
+  - People_with_Disabilities
+  - Pre_Post_Release_Offenders
+  - Rural_Regional_Remote_Communities
+  - Unemployed_Person
+  - Veterans_or_their_families
+  - Victims_of_crime
+  - Victims_of_Disasters
+  - Youth
+  - animals
+  - environment
+  - other_gender_identities
+  target_field: observation.source_record_id
+  transformation:
+    type: record_hash
+    expression: null
+    value: null
+  confidence: 0.98
+  derivation_level: L1
+  reason: ABN is a stable record key when present but is null on some records. Hashing
+    the complete raw row provides a deterministic, traceable record identifier for
+    every row, including those without an ABN.
+- source_fields:
+  - Charity_Legal_Name
+  target_field: entity.legal_name
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L0
+  reason: The source explicitly labels this as the charity's legal name.
+- source_fields:
+  - Address_Line_1
+  - Address_Line_2
+  - Address_Line_3
+  - Town_City
+  - State
+  - Postcode
+  - Country
+  target_field: address.full
+  transformation:
+    type: sql_expression
+    expression: concat_ws(', ', nullif(trim("Address_Line_1"), ''), nullif(trim("Address_Line_2"),
+      ''), nullif(trim("Address_Line_3"), ''), nullif(trim("Town_City"), ''), nullif(trim(concat_ws('
+      ', nullif(trim("State"), ''), nullif(trim("Postcode"), ''))), ''), nullif(trim("Country"),
+      ''))
+    value: null
+  confidence: 0.94
+  derivation_level: L1
+  reason: Combines the supplied address components in order, omitting null and blank
+    components.
+- source_fields:
+  - Town_City
+  target_field: address.locality
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.97
+  derivation_level: L0
+  reason: Explicit locality field.
+- source_fields:
+  - State
+  target_field: address.state
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN nullif(trim("State"), '') IS NULL THEN NULL WHEN upper(trim("State"))
+      IN ('NSW', 'NEW SOUTH WALES') THEN 'NSW' WHEN upper(trim("State")) IN ('VIC',
+      'VICTORIA') THEN 'VIC' WHEN upper(trim("State")) IN ('QLD', 'QUEENSLAND') THEN
+      'QLD' WHEN upper(trim("State")) IN ('WA', 'WESTERN AUSTRALIA') THEN 'WA' WHEN
+      upper(trim("State")) IN ('SA', 'SOUTH AUSTRALIA') THEN 'SA' WHEN upper(trim("State"))
+      IN ('TAS', 'TASMANIA') THEN 'TAS' WHEN upper(trim("State")) IN ('ACT', 'AUSTRALIAN
+      CAPITAL TERRITORY') THEN 'ACT' WHEN upper(trim("State")) IN ('NT', 'NORTHERN
+      TERRITORY') THEN 'NT' ELSE 'OTHER' END
+    value: null
+  confidence: 0.91
+  derivation_level: L1
+  reason: Normalizes recognized Australian state and territory names or abbreviations
+    to the ontology enum; other nonblank values map to OTHER.
+- source_fields:
+  - Postcode
+  target_field: address.postcode
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.96
+  derivation_level: L0
+  reason: Explicit postcode field; retained as a string to preserve its source representation.
+- source_fields:
+  - Country
+  target_field: address.country
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN upper(trim("Country")) IN ('AUSTRALIA', 'AU') THEN 'AU'
+      ELSE NULL END
+    value: null
+  confidence: 0.9
+  derivation_level: L1
+  reason: Normalizes the recognized Australian country values; other values are not
+    reliable enough to assert as a country.
+- source_fields:
+  - Charity_Website
+  target_field: entity.website
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.95
+  derivation_level: L0
+  reason: Explicit charity website field; preserves the source URL as provided.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: 8fb32972-24e9-4c95-885e-7140be51be8a
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: Other_Organisation_Names
+  reason: May contain multiple names in a single value, and the delimiter and name
+    boundaries cannot be safely determined for one-observation-per-trading-name output.
+- source_field: Address_Type
+  reason: Describes the address category and does not correspond to an address ontology
+    field.
+- source_field: Registration_Date
+  reason: This is the ACNC charity registration date, not necessarily the entity's
+    legal registration date.
+- source_field: Date_Organisation_Established
+  reason: Establishment date is not the ontology's date_registered field.
+- source_field: Charity_Size
+  reason: Charity size has no corresponding ontology field.
+- source_field: Number_of_Responsible_Persons
+  reason: Responsible-person count has no corresponding ontology field.
+- source_field: Financial_Year_End
+  reason: Financial year end has no corresponding ontology field.
+- source_field: Operates_in_ACT
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_NSW
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_NT
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_QLD
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_SA
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_TAS
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_VIC
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operates_in_WA
+  reason: Operating-area flag has no corresponding ontology field.
+- source_field: Operating_Countries
+  reason: Operating countries are not the entity's address country and have no corresponding
+    ontology field.
+- source_field: PBI
+  reason: Charity tax-purpose classification has no corresponding ontology field.
+- source_field: HPC
+  reason: Charity tax-purpose classification has no corresponding ontology field.
+- source_field: Preventing_or_relieving_suffering_of_animals
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_Culture
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_Education
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_Health
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Promote_or_oppose_a_change_to_law__government_poll_or_prac
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_natual_environment
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Promoting_or_protecting_human_rights
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Purposes_beneficial_to_ther_general_public_and_other_analogous
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Promoting_reconciliation__mutual_respect_and_tolerance
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_Religion
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_social_or_public_welfare
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Advancing_security_or_safety_of_Australia_or_Australian_public
+  reason: Charitable purpose flag has no corresponding ontology field.
+- source_field: Aboriginal_or_TSI
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Adults
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Aged_Persons
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Children
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Communities_Overseas
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Early_Childhood
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Ethnic_Groups
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Families
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Females
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Financially_Disadvantaged
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: LGBTIQA+
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: General_Community_in_Australia
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Males
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Migrants_Refugees_or_Asylum_Seekers
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Other_Beneficiaries
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Other_Charities
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: People_at_risk_of_homelessness
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: People_with_Chronic_Illness
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: People_with_Disabilities
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Pre_Post_Release_Offenders
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Rural_Regional_Remote_Communities
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Unemployed_Person
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Veterans_or_their_families
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Victims_of_crime
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Victims_of_Disasters
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: Youth
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: animals
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: environment
+  reason: Beneficiary-group flag has no corresponding ontology field.
+- source_field: other_gender_identities
+  reason: Beneficiary-group flag has no corresponding ontology field.
+research_notes: []
+agent_notes:
+- Changed observation.source_record_id to a deterministic hash of the complete raw
+  record so rows with null ABNs still receive a non-null, traceable identifier.

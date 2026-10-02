@@ -1,0 +1,171 @@
+config_version: '1.0'
+source:
+  dataset_id: 7b8656f9-606d-4337-af29-66b89b2eeefb
+  dataset_title: ASIC - Company Dataset
+  resource_id: 5c3914e6-413e-4a2c-b890-bf8efe3eabf2
+  resource_name: Company Dataset - Current
+  resource_url: https://data.gov.au/data/dataset/7b8656f9-606d-4337-af29-66b89b2eeefb/resource/5c3914e6-413e-4a2c-b890-bf8efe3eabf2/download/company_202609.csv
+  resource_format: CSV
+  publisher: Australian Securities and Investments Commission (ASIC)
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2026-09-28T15:24:24.297946'
+  resource_last_modified: '2026-09-28T14:51:25.555707'
+reader:
+  format: csv
+  delimiter: null
+  header: true
+  skip: 0
+  sheet_name: null
+  record_tag: null
+  zip_member: null
+source_reliability: 0.98
+source_reliability_reason: ASIC is the Australian corporate regulator and a highly
+  authoritative source for company registration details and identifiers.
+mappings:
+- source_fields:
+  - Company Name
+  - Current Name
+  target_field: entity.legal_name
+  transformation:
+    type: sql_expression
+    expression: COALESCE(NULLIF(TRIM("Current Name"), ''), NULLIF(TRIM("Company Name"),
+      ''))
+    value: null
+  confidence: 0.9
+  derivation_level: L1
+  reason: Use the explicitly supplied current name where present; otherwise use the
+    company name.
+- source_fields:
+  - ACN
+  target_field: entity.acn
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 1.0
+  derivation_level: L0
+  reason: The deterministic identifier check reports all sampled ACNs as valid.
+- source_fields:
+  - ABN
+  target_field: entity.abn
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN regexp_full_match(TRIM("ABN"), '[0-9]{11}') AND (((CAST(SUBSTR(TRIM("ABN"),
+      1, 1) AS INTEGER) - 1) * 10 + CAST(SUBSTR(TRIM("ABN"), 2, 1) AS INTEGER) + CAST(SUBSTR(TRIM("ABN"),
+      3, 1) AS INTEGER) * 3 + CAST(SUBSTR(TRIM("ABN"), 4, 1) AS INTEGER) * 5 + CAST(SUBSTR(TRIM("ABN"),
+      5, 1) AS INTEGER) * 7 + CAST(SUBSTR(TRIM("ABN"), 6, 1) AS INTEGER) * 9 + CAST(SUBSTR(TRIM("ABN"),
+      7, 1) AS INTEGER) * 11 + CAST(SUBSTR(TRIM("ABN"), 8, 1) AS INTEGER) * 13 + CAST(SUBSTR(TRIM("ABN"),
+      9, 1) AS INTEGER) * 15 + CAST(SUBSTR(TRIM("ABN"), 10, 1) AS INTEGER) * 17 +
+      CAST(SUBSTR(TRIM("ABN"), 11, 1) AS INTEGER) * 19) % 89 = 0) THEN TRIM("ABN")
+      ELSE NULL END
+    value: null
+  confidence: 0.99
+  derivation_level: L1
+  reason: Retain only 11-digit values that pass the ABN checksum; this excludes placeholder
+    and invalid values.
+- source_fields:
+  - Status
+  target_field: entity.status
+  transformation:
+    type: sql_expression
+    expression: CASE TRIM("Status") WHEN 'REGD' THEN 'active' WHEN 'DRGD' THEN 'deregistered'
+      WHEN 'SOFF' THEN 'deregistered' ELSE 'unknown' END
+    value: null
+  confidence: 0.84
+  derivation_level: L1
+  reason: Translate the clear registered and struck-off/deregistered statuses; use
+    unknown for codes whose meaning is not established here.
+- source_fields:
+  - Date of Registration
+  target_field: entity.date_registered
+  transformation:
+    type: sql_expression
+    expression: CAST(try_strptime(TRIM("Date of Registration"), '%d/%m/%Y') AS DATE)
+    value: null
+  confidence: 0.99
+  derivation_level: L1
+  reason: Parse the registration date in the observed day/month/year format.
+- source_fields:
+  - Date of Deregistration
+  target_field: observation.valid_to
+  transformation:
+    type: sql_expression
+    expression: CAST(try_strptime(TRIM("Date of Deregistration"), '%d/%m/%Y') AS DATE)
+    value: null
+  confidence: 0.93
+  derivation_level: L1
+  reason: The source's deregistration date marks the end of the company's registered
+    status.
+- source_fields:
+  - Company Name
+  - ACN
+  - Type
+  - Class
+  - Sub Class
+  - Status
+  - Date of Registration
+  - Date of Deregistration
+  - Previous State of Registration
+  - State Registration number
+  - Modified since last report
+  - Current Name Indicator
+  - ABN
+  - Current Name
+  - Current Name Start Date
+  target_field: observation.source_record_id
+  transformation:
+    type: record_hash
+    expression: null
+    value: null
+  confidence: 0.98
+  derivation_level: L1
+  reason: No stable unique row key is provided. Hash all source columns to create
+    a deterministic identifier traceable to the raw record.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: 5c3914e6-413e-4a2c-b890-bf8efe3eabf2
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: Type
+  reason: ASIC company-type codes are not sufficiently established here to map safely
+    to the ontology's entity-type categories.
+- source_field: Class
+  reason: ASIC-specific classification code with no direct ontology target.
+- source_field: Sub Class
+  reason: ASIC-specific subclass code with no direct ontology target.
+- source_field: Previous State of Registration
+  reason: This is a previous registration jurisdiction, not an entity address state.
+- source_field: State Registration number
+  reason: ASIC state registration number is not one of the supported identifier types.
+- source_field: Modified since last report
+  reason: Dataset change indicator rather than an entity attribute.
+- source_field: Current Name Indicator
+  reason: Source-specific indicator used to identify current-name records; it has
+    no direct ontology target.
+- source_field: Current Name Start Date
+  reason: This is the effective date of a name change, not the entity's date of registration
+    or another supported date field.
+research_notes: []
+agent_notes:
+- ABNs are emitted only when they pass the standard ABN checksum; invalid values,
+  including placeholders, become NULL.
+- The source record identifier is a deterministic hash of all 15 source columns because
+  ACN is not unique across name-history records.

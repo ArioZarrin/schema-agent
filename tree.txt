@@ -1,0 +1,239 @@
+.
+├── ASSIGNMENT.md
+├── README.md
+├── analysis
+│   ├── _README.md
+│   ├── agent.ipynb
+│   ├── data
+│   │   ├── ASIC_Company_Dataset
+│   │   │   ├── Company_Dataset_Current.csv
+│   │   │   └── Company_Dataset_Current.profile.json
+│   │   ├── datasets_with_embeddings.csv
+│   │   ├── datasets_with_scores.csv
+│   │   └── datasets_with_useful_resources.csv
+│   ├── data_model.ipynb
+│   ├── datasets.ipynb
+│   ├── openai.ipynb
+│   ├── outputs
+│   │   ├── part2
+│   │   │   ├── canonical
+│   │   │   │   └── 4117fdec-3eff-44a1-9b78-869f7ec5c409
+│   │   │   │       ├── canonical.observations.jsonl
+│   │   │   │       ├── canonical.records.jsonl
+│   │   │   │       └── extraction.issues.jsonl
+│   │   │   ├── configs
+│   │   │   │   └── 4117fdec-3eff-44a1-9b78-869f7ec5c409.mapping.yaml
+│   │   │   ├── langgraph_checkpoints.sqlite
+│   │   │   ├── langgraph_checkpoints.sqlite-shm
+│   │   │   ├── langgraph_checkpoints.sqlite-wal
+│   │   │   ├── metrics
+│   │   │   │   └── 4117fdec-3eff-44a1-9b78-869f7ec5c409.20260929T130618Z.json
+│   │   │   ├── profiles
+│   │   │   │   ├── 1ca29b03-220d-4c19-b34e-c7932cd4508d.profile.json
+│   │   │   │   ├── 4117fdec-3eff-44a1-9b78-869f7ec5c409
+│   │   │   │   │   └── 0f2e41ec-6f49-4d35-8e6d-ebcd4a0e3e27.profile.json
+│   │   │   │   ├── 5bd7fcab-e315-42cb-8daf-50b7efc2027e.profile.json
+│   │   │   │   ├── 6f1cc305-a8b2-4748-bd40-c00754ad6504.profile.json
+│   │   │   │   ├── 732d6bf3-2670-4226-9235-789bcf670288.profile.json
+│   │   │   │   ├── 7b8656f9-606d-4337-af29-66b89b2eeefb.profile.json
+│   │   │   │   ├── ab7eddce-84df-4098-bc8f-500d0d9776d1
+│   │   │   │   │   └── d98a113d-6b50-40e6-b65f-2612efc877f4.profile.json
+│   │   │   │   └── b050b242-4487-4306-abf5-07ca073e5594.profile.json
+│   │   │   ├── raw
+│   │   │   │   ├── 1ca29b03-220d-4c19-b34e-c7932cd4508d
+│   │   │   │   │   └── e70e6e0b-1a62-456b-a3d1-cd8f7508b54f
+│   │   │   │   │       └── Victorian_Government_Schools_ABNs.xlsx
+│   │   │   │   ├── 4117fdec-3eff-44a1-9b78-869f7ec5c409
+│   │   │   │   │   └── 0f2e41ec-6f49-4d35-8e6d-ebcd4a0e3e27
+│   │   │   │   │       └── Registered_Auditor_Dataset_Current.csv
+│   │   │   │   ├── 5bd7fcab-e315-42cb-8daf-50b7efc2027e
+│   │   │   │   │   └── 0ae4d427-6fa8-4d40-8e76-c6909b5a071b
+│   │   │   │   │       ├── ABN_Bulk_Extract_Part_1.zip
+│   │   │   │   │       └── extracted
+│   │   │   │   │           └── 20260923_Public01.xml
+│   │   │   │   ├── 6f1cc305-a8b2-4748-bd40-c00754ad6504
+│   │   │   │   │   └── 34f8f3b8-68b2-41b5-ac3f-9ff01da70c5c
+│   │   │   │   │       └── Jan_2023.xlsx
+│   │   │   │   ├── 732d6bf3-2670-4226-9235-789bcf670288
+│   │   │   │   │   └── b8575bd0-16d4-452e-a4ec-db48330e6356
+│   │   │   │   │       └── Business_establishments_location_and_industry_classification_CSV.csv
+│   │   │   │   ├── 7b8656f9-606d-4337-af29-66b89b2eeefb
+│   │   │   │   │   └── 5c3914e6-413e-4a2c-b890-bf8efe3eabf2
+│   │   │   │   │       └── Company_Dataset_Current.csv
+│   │   │   │   ├── ab7eddce-84df-4098-bc8f-500d0d9776d1
+│   │   │   │   │   └── d98a113d-6b50-40e6-b65f-2612efc877f4
+│   │   │   │   │       └── AFS_Licensee_Dataset_Current.csv
+│   │   │   │   └── b050b242-4487-4306-abf5-07ca073e5594
+│   │   │   │       └── 8fb32972-24e9-4c95-885e-7140be51be8a
+│   │   │   │           └── ACNC_Register_of_Australian_charities_CSV.csv
+│   │   │   ├── rejected
+│   │   │   ├── review
+│   │   │   │   ├── 4117fdec-3eff-44a1-9b78-869f7ec5c409.candidate.yaml
+│   │   │   │   └── ab7eddce-84df-4098-bc8f-500d0d9776d1.candidate.yaml
+│   │   │   ├── state
+│   │   │   │   ├── 1ca29b03-220d-4c19-b34e-c7932cd4508d.json
+│   │   │   │   ├── 4117fdec-3eff-44a1-9b78-869f7ec5c409.json
+│   │   │   │   ├── 5bd7fcab-e315-42cb-8daf-50b7efc2027e.json
+│   │   │   │   ├── 6f1cc305-a8b2-4748-bd40-c00754ad6504.json
+│   │   │   │   ├── 732d6bf3-2670-4226-9235-789bcf670288.json
+│   │   │   │   ├── 7b8656f9-606d-4337-af29-66b89b2eeefb.json
+│   │   │   │   ├── ab7eddce-84df-4098-bc8f-500d0d9776d1.json
+│   │   │   │   └── b050b242-4487-4306-abf5-07ca073e5594.json
+│   │   │   └── working.duckdb
+│   │   └── part3
+│   │       ├── firmable.duckdb
+│   │       └── firmable.duckdb.wal
+│   └── schema_inference.ipynb
+├── firmable.duckdb
+├── firmable.duckdb.wal
+├── notebooks
+│   ├── 01_dataset_discovery.ipynb
+│   ├── 02_schema_inference.ipynb
+│   ├── 03_entity_resolution.ipynb
+│   ├── 04_entity_profiles.ipynb
+│   └── 05_Writeup.md
+├── outputs_ario
+│   ├── part1
+│   │   └── ranked_shortlist_50.csv
+│   ├── part2
+│   │   ├── dataset_profiles
+│   │   │   ├── abn_bulk_extract.profile.json
+│   │   │   ├── acnc_registered_charities.profile.json
+│   │   │   ├── annual_report_cbs.profile.json
+│   │   │   ├── asic_company.profile.json
+│   │   │   ├── business_establishments_location_and_industry_classification.profile.json
+│   │   │   ├── business_establishments_per_clue_industry_in_municipality.profile.json
+│   │   │   ├── caf_restaurant_bistro_seats.profile.json
+│   │   │   ├── victorian_government_schools_abns.profile.json
+│   │   │   └── victorian_liquor_licences_by_location.profile.json
+│   │   ├── gold_inspection
+│   │   │   ├── gold_abn_bulk_extract.parquet
+│   │   │   ├── gold_acnc_registered_charities.parquet
+│   │   │   ├── gold_asic_company.parquet
+│   │   │   ├── gold_business_establishments_location_and_industry_classification.parquet
+│   │   │   ├── gold_caf_restaurant_bistro_seats.parquet
+│   │   │   ├── gold_victorian_government_schools_abns.parquet
+│   │   │   └── gold_victorian_liquor_licences_by_location.parquet
+│   │   ├── mapping_configs
+│   │   │   ├── abn_bulk_extract.mapping.yaml
+│   │   │   ├── acnc_registered_charities.mapping.yaml
+│   │   │   ├── asic_company.mapping.yaml
+│   │   │   ├── business_establishments_location_and_industry_classification.mapping.yaml
+│   │   │   ├── caf_restaurant_bistro_seats.mapping.yaml
+│   │   │   ├── victorian_government_schools_abns.mapping.yaml
+│   │   │   └── victorian_liquor_licences_by_location.mapping.yaml
+│   │   ├── metrics
+│   │   │   ├── abn_bulk_extract.json
+│   │   │   ├── acnc_registered_charities.json
+│   │   │   ├── asic_company.json
+│   │   │   ├── business_establishments_location_and_industry_classification.json
+│   │   │   ├── caf_restaurant_bistro_seats.json
+│   │   │   ├── victorian_government_schools_abns.json
+│   │   │   └── victorian_liquor_licences_by_location.json
+│   │   ├── raw
+│   │   │   ├── abn_bulk_extract
+│   │   │   │   ├── extracted
+│   │   │   │   │   ├── 20260930_Public01.xml
+│   │   │   │   │   ├── 20260930_Public02.xml
+│   │   │   │   │   ├── 20260930_Public03.xml
+│   │   │   │   │   ├── 20260930_Public04.xml
+│   │   │   │   │   ├── 20260930_Public05.xml
+│   │   │   │   │   ├── 20260930_Public06.xml
+│   │   │   │   │   ├── 20260930_Public07.xml
+│   │   │   │   │   ├── 20260930_Public08.xml
+│   │   │   │   │   ├── 20260930_Public09.ABR.jsonl
+│   │   │   │   │   ├── 20260930_Public09.xml
+│   │   │   │   │   └── 20260930_Public10.xml
+│   │   │   │   └── public_split_1_10.zip
+│   │   │   ├── acnc_registered_charities
+│   │   │   │   └── datadotgov_main.csv
+│   │   │   ├── annual_report_cbs
+│   │   │   │   ├── 2017-18-consumer-and-business-services-associations-act_data.csv
+│   │   │   │   └── 2017-18-consumer-and-business-services-building-work-contractors-act_data.csv
+│   │   │   ├── asic_company
+│   │   │   │   └── company_202609.csv
+│   │   │   ├── business_establishments_location_and_industry_classification
+│   │   │   │   └── Business_establishments_location_and_industry_classification_CSV.csv
+│   │   │   ├── business_establishments_per_clue_industry_in_municipality
+│   │   │   │   └── aa667338-182e-44b0-8426-72a7a961216e.csv
+│   │   │   ├── caf_restaurant_bistro_seats
+│   │   │   │   └── Caf_restaurant_bistro_seats_CSV.csv
+│   │   │   ├── victorian_government_schools_abns
+│   │   │   │   └── dv183-schoolABNdetails.xlsx
+│   │   │   └── victorian_liquor_licences_by_location
+│   │   │       └── Current_Victorian_Licences_By_Location_31_August_2026.xlsx
+│   │   ├── rejected
+│   │   │   └── annual_report_cbs.candidate.yaml
+│   │   ├── review
+│   │   │   ├── abn_bulk_extract.candidate.yaml
+│   │   │   ├── acnc_registered_charities.candidate.yaml
+│   │   │   ├── annual_report_cbs.candidate.yaml
+│   │   │   ├── asic_company.candidate.yaml
+│   │   │   ├── business_establishments_location_and_industry_classification.candidate.yaml
+│   │   │   ├── caf_restaurant_bistro_seats.candidate.yaml
+│   │   │   ├── victorian_government_schools_abns.candidate.yaml
+│   │   │   └── victorian_liquor_licences_by_location.candidate.yaml
+│   │   ├── sandbox
+│   │   ├── state
+│   │   │   ├── abn_bulk_extract.json
+│   │   │   ├── acnc_registered_charities.json
+│   │   │   ├── annual_report_cbs.json
+│   │   │   ├── asic_company.json
+│   │   │   ├── business_establishments_location_and_industry_classification.json
+│   │   │   ├── caf_restaurant_bistro_seats.json
+│   │   │   ├── reader_cache
+│   │   │   │   └── annual_report_cbs
+│   │   │   │       └── 0559d4a542b2_2017-18-consumer-and-business-services-associations-act_data.csv
+│   │   │   ├── victorian_government_schools_abns.json
+│   │   │   └── victorian_liquor_licences_by_location.json
+│   │   ├── workflow_checkpoints.sqlite
+│   │   ├── workflow_checkpoints.sqlite-shm
+│   │   └── workflow_checkpoints.sqlite-wal
+│   ├── part3
+│   │   ├── entities_pool.parquet
+│   │   ├── entity_link_index.parquet
+│   │   ├── entity_resolution_review.parquet
+│   │   ├── link_review_50.csv
+│   │   ├── possible_matches.csv
+│   │   ├── resolution_metrics.json
+│   │   ├── resolution_passes.csv
+│   │   └── source_coverage.csv
+│   └── part4
+│       ├── README.md
+│       ├── entity_conflict_values.csv
+│       ├── entity_conflict_values.parquet
+│       ├── entity_field_claims.csv
+│       ├── entity_field_claims.parquet
+│       ├── entity_field_conflicts.csv
+│       ├── entity_field_conflicts.parquet
+│       ├── entity_field_scores.csv
+│       ├── entity_field_scores.parquet
+│       ├── firmable_entities.csv
+│       ├── firmable_entities.parquet
+│       └── metrics.json
+├── pyproject.toml
+├── resources
+│   └── firmable_ontology.yaml
+├── src
+│   └── firmable
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-312.pyc
+│       │   ├── database.cpython-312.pyc
+│       │   └── readers.cpython-312.pyc
+│       ├── database.py
+│       └── readers.py
+├── tests
+│   ├── __pycache__
+│   │   ├── test_database_connections.cpython-312.pyc
+│   │   ├── test_entity_resolution.cpython-312.pyc
+│   │   ├── test_part2_serialization.cpython-312.pyc
+│   │   └── test_reconciliation.cpython-312.pyc
+│   ├── test_database_connections.py
+│   ├── test_entity_resolution.py
+│   ├── test_part2_serialization.py
+│   └── test_reconciliation.py
+├── tree.txt
+└── uv.lock
+
+68 directories, 169 files

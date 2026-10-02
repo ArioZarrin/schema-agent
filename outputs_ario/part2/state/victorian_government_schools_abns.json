@@ -1,0 +1,18 @@
+{
+  "stage": "approved",
+  "dataset": {
+    "dataset_id": "1ca29b03-220d-4c19-b34e-c7932cd4508d",
+    "title": "Victorian Government Schools ABNs",
+    "slug": "victorian_government_schools_abns",
+    "publisher": "Department of Education",
+    "part1_confidence": 0.4869
+  },
+  "resource_id": "e70e6e0b-1a62-456b-a3d1-cd8f7508b54f",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/victorian_government_schools_abns/dv183-schoolABNdetails.xlsx",
+  "source_table": "src_victorian_government_schools_abns",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/victorian_government_schools_abns.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/victorian_government_schools_abns.candidate.yaml",
+  "updated_at": "2026-10-02T03:38:20.231251+00:00",
+  "gold_table": "gold_victorian_government_schools_abns",
+  "rows": 1000
+}

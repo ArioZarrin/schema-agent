@@ -1,0 +1,113 @@
+{
+  "mode": "normal",
+  "model_calls": 3,
+  "tool_calls": 0,
+  "validation_calls": 1,
+  "step_count": 4,
+  "input_tokens": 17117,
+  "output_tokens": 4659,
+  "total_tokens": 21776,
+  "estimated_cost_usd": null,
+  "wall_clock_seconds": 104.93,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "5bd7fcab-e315-42cb-8daf-50b7efc2027e",
+    "title": "ABN Bulk Extract",
+    "slug": "abn_bulk_extract",
+    "publisher": "Australian Business Register",
+    "part1_confidence": 0.8301
+  },
+  "resource_id": "0ae4d427-6fa8-4d40-8e76-c6909b5a071b",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "entity.abn": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_record_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "entity.status": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "entity.entity_type": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.valid_from": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.state": {
+        "rows": 1000,
+        "non_null": 998,
+        "null_rate": 0.002,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.postcode": {
+        "rows": 1000,
+        "non_null": 999,
+        "null_rate": 0.001,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "address.country": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_id": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 1000,
+        "non_null": 1000,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 1000
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

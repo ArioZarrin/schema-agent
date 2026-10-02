@@ -1,0 +1,388 @@
+{
+  "metadata": {
+    "dataset_id": "7b8656f9-606d-4337-af29-66b89b2eeefb",
+    "title": "ASIC - Company Dataset",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "resource_id": "5c3914e6-413e-4a2c-b890-bf8efe3eabf2",
+    "resource_name": "Company Dataset - Current",
+    "resource_format": "CSV",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-09-28T15:24:24.297946",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/asic_company/company_202609.csv",
+    "reader": {
+      "format": "csv",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 4448915,
+    "agent_rows": 4447915,
+    "validation_rows": 1000,
+    "column_count": 15
+  },
+  "columns": [
+    {
+      "name": "Company Name",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5000,
+      "examples": [
+        "BRAND DRIVE PROPERTY NOMINEES PTY LTD",
+        "AZZURE - NTH DANDENONG PTY LTD",
+        "MARACOL PTY LTD",
+        "COSMIC IT SOLUTIONS PTY LTD",
+        "ECOCLEAN DRY ICE BLASTING PTY LTD"
+      ]
+    },
+    {
+      "name": "ACN",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 4997,
+      "examples": [
+        "618981105",
+        "117187274",
+        "129820408",
+        "672155467",
+        "615819853"
+      ]
+    },
+    {
+      "name": "Type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 4,
+      "examples": [
+        "APTY",
+        "RACN",
+        "APUB",
+        "FNOS"
+      ]
+    },
+    {
+      "name": "Class",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5,
+      "examples": [
+        "LMSH",
+        "NONE",
+        "LMGT",
+        "UNLM",
+        "LMSG"
+      ]
+    },
+    {
+      "name": "Sub Class",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 10,
+      "examples": [
+        "PROP",
+        "PSTC",
+        "RACA",
+        "ULST",
+        "ULSN"
+      ]
+    },
+    {
+      "name": "Status",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5,
+      "examples": [
+        "REGD",
+        "SOFF",
+        "DRGD",
+        "EXAD",
+        "NOAC"
+      ]
+    },
+    {
+      "name": "Date of Registration",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 3522,
+      "examples": [
+        "09/05/2017",
+        "17/11/2005",
+        "21/02/2008",
+        "13/10/2023",
+        "09/11/2016"
+      ]
+    },
+    {
+      "name": "Date of Deregistration",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9502,
+      "sample_distinct": 99,
+      "examples": [
+        "20/04/2026",
+        "17/12/2025",
+        "03/09/2026",
+        "07/01/2026",
+        "15/07/2026"
+      ]
+    },
+    {
+      "name": "Previous State of Registration",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9236,
+      "sample_distinct": 10,
+      "examples": [
+        "VIC",
+        "QLD",
+        "NSW",
+        "WA ",
+        "ACT"
+      ]
+    },
+    {
+      "name": "State Registration number",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9232,
+      "sample_distinct": 384,
+      "examples": [
+        "C0288628D",
+        "77B00615J ",
+        "C0141172P ",
+        "80B07834P",
+        "C0114012B"
+      ]
+    },
+    {
+      "name": "Modified since last report",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9978,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "Current Name Indicator",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0986,
+      "sample_distinct": 1,
+      "examples": [
+        "Y"
+      ]
+    },
+    {
+      "name": "ABN",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 3079,
+      "examples": [
+        "0",
+        "73129820408",
+        "53672155467",
+        "24615819853",
+        "45155315405"
+      ]
+    },
+    {
+      "name": "Current Name",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9014,
+      "sample_distinct": 493,
+      "examples": [
+        "TAG-NTH DANDENONG PTY LTD",
+        "ECOCLEAN NSW PTY LTD",
+        "MARQUIS MARKETING PTY LTD",
+        "JFKD CAPITAL PTY LTD",
+        "BLUEPRINT NT PTY LTD"
+      ]
+    },
+    {
+      "name": "Current Name Start Date",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9016,
+      "sample_distinct": 473,
+      "examples": [
+        "09/09/2016",
+        "21/06/2018",
+        "06/04/2020",
+        "05/02/2026",
+        "01/09/2022"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "Company Name": "TEAM WHEELS PTY LTD",
+      "ACN": "103388281",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PSTC",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "27103388281",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "HARLMAX PTY LTD",
+      "ACN": "103388307",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "34103388307",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "QUERCIA PTY LTD",
+      "ACN": "103388503",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "0",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "T & S WALLACE PTY LTD",
+      "ACN": "103388503",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": null,
+      "ABN": "0",
+      "Current Name": "QUERCIA PTY LTD",
+      "Current Name Start Date": "14/03/2007"
+    },
+    {
+      "Company Name": "FRAZAM PTY LTD",
+      "ACN": "103388923",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "75103388923",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "ALDERSYDE TRADING PTY LTD",
+      "ACN": "103388969",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "0",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "SHIELL FREIGHTLINES PTY LTD",
+      "ACN": "103388969",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": null,
+      "ABN": "0",
+      "Current Name": "ALDERSYDE TRADING PTY LTD",
+      "Current Name Start Date": "07/11/2007"
+    },
+    {
+      "Company Name": "LOAN SA PTY LTD",
+      "ACN": "103389037",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": null,
+      "ABN": "15103389037",
+      "Current Name": "PICKMONT PTY LTD",
+      "Current Name Start Date": "13/01/2004"
+    },
+    {
+      "Company Name": "PICKMONT PTY LTD",
+      "ACN": "103389037",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "15103389037",
+      "Current Name": null,
+      "Current Name Start Date": null
+    },
+    {
+      "Company Name": "BRUM.BS WELDING & FABRICATION PTY LTD",
+      "ACN": "103389117",
+      "Type": "APTY",
+      "Class": "LMSH",
+      "Sub Class": "PROP",
+      "Status": "REGD",
+      "Date of Registration": "15/01/2003",
+      "Date of Deregistration": null,
+      "Previous State of Registration": null,
+      "State Registration number": null,
+      "Modified since last report": null,
+      "Current Name Indicator": "Y",
+      "ABN": "34103389117",
+      "Current Name": null,
+      "Current Name Start Date": null
+    }
+  ]
+}

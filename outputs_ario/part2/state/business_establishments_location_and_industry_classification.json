@@ -1,0 +1,18 @@
+{
+  "stage": "approved",
+  "dataset": {
+    "dataset_id": "732d6bf3-2670-4226-9235-789bcf670288",
+    "title": "Business establishments location and industry classification",
+    "slug": "business_establishments_location_and_industry_classification",
+    "publisher": "City of Melbourne",
+    "part1_confidence": 0.284
+  },
+  "resource_id": "b8575bd0-16d4-452e-a4ec-db48330e6356",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/business_establishments_location_and_industry_classification/Business_establishments_location_and_industry_classification_CSV.csv",
+  "source_table": "src_business_establishments_location_and_industry_classification",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/business_establishments_location_and_industry_classification.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/business_establishments_location_and_industry_classification.candidate.yaml",
+  "updated_at": "2026-10-02T03:49:17.416347+00:00",
+  "gold_table": "gold_business_establishments_location_and_industry_classification",
+  "rows": 1000
+}

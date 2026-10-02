@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "dataset_id": "e761c394-a103-4243-aad2-d47f2d8fcf8d",
+    "title": "Business establishments per CLUE industry in municipality",
+    "publisher": "City of Melbourne Open Data",
+    "resource_id": "aa667338-182e-44b0-8426-72a7a961216e",
+    "resource_name": null,
+    "resource_format": "CSV",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-10-01T14:26:15.443139",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/business_establishments_per_clue_industry_in_municipality/aa667338-182e-44b0-8426-72a7a961216e.csv",
+    "reader": {
+      "format": "csv",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 23,
+    "agent_rows": 19,
+    "validation_rows": 4,
+    "column_count": 23
+  },
+  "columns": [
+    {
+      "name": "census_year",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "2016",
+        "2003",
+        "2011",
+        "2018",
+        "2014"
+      ]
+    },
+    {
+      "name": "clue_small_area",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1,
+      "examples": [
+        "City of Melbourne (total)"
+      ]
+    },
+    {
+      "name": "accommodation",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 18,
+      "examples": [
+        "290",
+        "206",
+        "252",
+        "300",
+        "268"
+      ]
+    },
+    {
+      "name": "admin_and_support_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "645",
+        "670",
+        "723",
+        "620",
+        "667"
+      ]
+    },
+    {
+      "name": "agriculture_and_mining",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 15,
+      "examples": [
+        "56",
+        "57",
+        "75",
+        "58",
+        "72"
+      ]
+    },
+    {
+      "name": "arts_and_recreation_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "628",
+        "404",
+        "582",
+        "642",
+        "599"
+      ]
+    },
+    {
+      "name": "business_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 18,
+      "examples": [
+        "2769",
+        "2041",
+        "2647",
+        "2841",
+        "2735"
+      ]
+    },
+    {
+      "name": "construction",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 18,
+      "examples": [
+        "328",
+        "147",
+        "284",
+        "387",
+        "306"
+      ]
+    },
+    {
+      "name": "education_and_training",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 18,
+      "examples": [
+        "638",
+        "294",
+        "518",
+        "661",
+        "526"
+      ]
+    },
+    {
+      "name": "electricity_gas_water_and_waste_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 15,
+      "examples": [
+        "186",
+        "167",
+        "188",
+        "183",
+        "185"
+      ]
+    },
+    {
+      "name": "finance_and_insurance",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "923",
+        "797",
+        "914",
+        "965",
+        "920"
+      ]
+    },
+    {
+      "name": "food_and_beverage_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "2715",
+        "1424",
+        "2240",
+        "2789",
+        "2546"
+      ]
+    },
+    {
+      "name": "health_care_and_social_assistance",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "1140",
+        "718",
+        "1024",
+        "1157",
+        "1079"
+      ]
+    },
+    {
+      "name": "information_media_and_telecommunications",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "276",
+        "370",
+        "344",
+        "264",
+        "280"
+      ]
+    },
+    {
+      "name": "manufacturing",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "523",
+        "548",
+        "582",
+        "495",
+        "545"
+      ]
+    },
+    {
+      "name": "other_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "1585",
+        "1154",
+        "1389",
+        "1634",
+        "1509"
+      ]
+    },
+    {
+      "name": "public_administration_and_safety",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 17,
+      "examples": [
+        "263",
+        "245",
+        "287",
+        "278",
+        "271"
+      ]
+    },
+    {
+      "name": "real_estate_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "374",
+        "183",
+        "293",
+        "430",
+        "333"
+      ]
+    },
+    {
+      "name": "rental_and_hiring_services",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 18,
+      "examples": [
+        "58",
+        "65",
+        "79",
+        "59",
+        "70"
+      ]
+    },
+    {
+      "name": "retail_trade",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "2395",
+        "1827",
+        "2576",
+        "2284",
+        "2473"
+      ]
+    },
+    {
+      "name": "transport_postal_and_storage",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 15,
+      "examples": [
+        "348",
+        "362",
+        "329",
+        "344",
+        "340"
+      ]
+    },
+    {
+      "name": "wholesale_trade",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "422",
+        "580",
+        "632",
+        "392",
+        "607"
+      ]
+    },
+    {
+      "name": "total_establishments_in_block",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 19,
+      "examples": [
+        "16562",
+        "12259",
+        "15977",
+        "16768",
+        "16335"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "census_year": "2016",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "290",
+      "admin_and_support_services": "645",
+      "agriculture_and_mining": "56",
+      "arts_and_recreation_services": "628",
+      "business_services": "2769",
+      "construction": "328",
+      "education_and_training": "638",
+      "electricity_gas_water_and_waste_services": "186",
+      "finance_and_insurance": "923",
+      "food_and_beverage_services": "2715",
+      "health_care_and_social_assistance": "1140",
+      "information_media_and_telecommunications": "276",
+      "manufacturing": "523",
+      "other_services": "1585",
+      "public_administration_and_safety": "263",
+      "real_estate_services": "374",
+      "rental_and_hiring_services": "58",
+      "retail_trade": "2395",
+      "transport_postal_and_storage": "348",
+      "wholesale_trade": "422",
+      "total_establishments_in_block": "16562"
+    },
+    {
+      "census_year": "2015",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "270",
+      "admin_and_support_services": "646",
+      "agriculture_and_mining": "64",
+      "arts_and_recreation_services": "603",
+      "business_services": "2770",
+      "construction": "304",
+      "education_and_training": "540",
+      "electricity_gas_water_and_waste_services": "186",
+      "finance_and_insurance": "878",
+      "food_and_beverage_services": "2608",
+      "health_care_and_social_assistance": "1088",
+      "information_media_and_telecommunications": "271",
+      "manufacturing": "552",
+      "other_services": "1531",
+      "public_administration_and_safety": "267",
+      "real_estate_services": "346",
+      "rental_and_hiring_services": "67",
+      "retail_trade": "2423",
+      "transport_postal_and_storage": "344",
+      "wholesale_trade": "598",
+      "total_establishments_in_block": "16356"
+    },
+    {
+      "census_year": "2010",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "247",
+      "admin_and_support_services": "731",
+      "agriculture_and_mining": "75",
+      "arts_and_recreation_services": "574",
+      "business_services": "2618",
+      "construction": "265",
+      "education_and_training": "509",
+      "electricity_gas_water_and_waste_services": "197",
+      "finance_and_insurance": "913",
+      "food_and_beverage_services": "2154",
+      "health_care_and_social_assistance": "1019",
+      "information_media_and_telecommunications": "358",
+      "manufacturing": "576",
+      "other_services": "1386",
+      "public_administration_and_safety": "294",
+      "real_estate_services": "284",
+      "rental_and_hiring_services": "77",
+      "retail_trade": "2438",
+      "transport_postal_and_storage": "349",
+      "wholesale_trade": "631",
+      "total_establishments_in_block": "15695"
+    },
+    {
+      "census_year": "2004",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "209",
+      "admin_and_support_services": "697",
+      "agriculture_and_mining": "57",
+      "arts_and_recreation_services": "430",
+      "business_services": "2077",
+      "construction": "153",
+      "education_and_training": "304",
+      "electricity_gas_water_and_waste_services": "174",
+      "finance_and_insurance": "754",
+      "food_and_beverage_services": "1554",
+      "health_care_and_social_assistance": "716",
+      "information_media_and_telecommunications": "364",
+      "manufacturing": "544",
+      "other_services": "1145",
+      "public_administration_and_safety": "247",
+      "real_estate_services": "186",
+      "rental_and_hiring_services": "66",
+      "retail_trade": "1928",
+      "transport_postal_and_storage": "350",
+      "wholesale_trade": "588",
+      "total_establishments_in_block": "12543"
+    },
+    {
+      "census_year": "2017",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "296",
+      "admin_and_support_services": "630",
+      "agriculture_and_mining": "56",
+      "arts_and_recreation_services": "635",
+      "business_services": "2812",
+      "construction": "373",
+      "education_and_training": "651",
+      "electricity_gas_water_and_waste_services": "190",
+      "finance_and_insurance": "933",
+      "food_and_beverage_services": "2736",
+      "health_care_and_social_assistance": "1138",
+      "information_media_and_telecommunications": "279",
+      "manufacturing": "525",
+      "other_services": "1586",
+      "public_administration_and_safety": "271",
+      "real_estate_services": "417",
+      "rental_and_hiring_services": "63",
+      "retail_trade": "2384",
+      "transport_postal_and_storage": "332",
+      "wholesale_trade": "417",
+      "total_establishments_in_block": "16724"
+    },
+    {
+      "census_year": "2012",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "261",
+      "admin_and_support_services": "718",
+      "agriculture_and_mining": "75",
+      "arts_and_recreation_services": "578",
+      "business_services": "2736",
+      "construction": "311",
+      "education_and_training": "510",
+      "electricity_gas_water_and_waste_services": "188",
+      "finance_and_insurance": "919",
+      "food_and_beverage_services": "2290",
+      "health_care_and_social_assistance": "1046",
+      "information_media_and_telecommunications": "325",
+      "manufacturing": "569",
+      "other_services": "1444",
+      "public_administration_and_safety": "281",
+      "real_estate_services": "306",
+      "rental_and_hiring_services": "72",
+      "retail_trade": "2494",
+      "transport_postal_and_storage": "340",
+      "wholesale_trade": "628",
+      "total_establishments_in_block": "16091"
+    },
+    {
+      "census_year": "2009",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "251",
+      "admin_and_support_services": "756",
+      "agriculture_and_mining": "80",
+      "arts_and_recreation_services": "561",
+      "business_services": "2704",
+      "construction": "255",
+      "education_and_training": "515",
+      "electricity_gas_water_and_waste_services": "195",
+      "finance_and_insurance": "964",
+      "food_and_beverage_services": "2078",
+      "health_care_and_social_assistance": "998",
+      "information_media_and_telecommunications": "381",
+      "manufacturing": "561",
+      "other_services": "1371",
+      "public_administration_and_safety": "293",
+      "real_estate_services": "280",
+      "rental_and_hiring_services": "69",
+      "retail_trade": "2431",
+      "transport_postal_and_storage": "350",
+      "wholesale_trade": "619",
+      "total_establishments_in_block": "15712"
+    },
+    {
+      "census_year": "2008",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "236",
+      "admin_and_support_services": "747",
+      "agriculture_and_mining": "76",
+      "arts_and_recreation_services": "528",
+      "business_services": "2662",
+      "construction": "237",
+      "education_and_training": "512",
+      "electricity_gas_water_and_waste_services": "198",
+      "finance_and_insurance": "961",
+      "food_and_beverage_services": "1969",
+      "health_care_and_social_assistance": "951",
+      "information_media_and_telecommunications": "403",
+      "manufacturing": "579",
+      "other_services": "1306",
+      "public_administration_and_safety": "305",
+      "real_estate_services": "270",
+      "rental_and_hiring_services": "73",
+      "retail_trade": "2327",
+      "transport_postal_and_storage": "373",
+      "wholesale_trade": "651",
+      "total_establishments_in_block": "15364"
+    },
+    {
+      "census_year": "2005",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "205",
+      "admin_and_support_services": "672",
+      "agriculture_and_mining": "67",
+      "arts_and_recreation_services": "446",
+      "business_services": "2174",
+      "construction": "156",
+      "education_and_training": "338",
+      "electricity_gas_water_and_waste_services": "173",
+      "finance_and_insurance": "791",
+      "food_and_beverage_services": "1704",
+      "health_care_and_social_assistance": "818",
+      "information_media_and_telecommunications": "391",
+      "manufacturing": "518",
+      "other_services": "1182",
+      "public_administration_and_safety": "266",
+      "real_estate_services": "204",
+      "rental_and_hiring_services": "71",
+      "retail_trade": "2174",
+      "transport_postal_and_storage": "367",
+      "wholesale_trade": "608",
+      "total_establishments_in_block": "13325"
+    },
+    {
+      "census_year": "2003",
+      "clue_small_area": "City of Melbourne (total)",
+      "accommodation": "206",
+      "admin_and_support_services": "670",
+      "agriculture_and_mining": "57",
+      "arts_and_recreation_services": "404",
+      "business_services": "2041",
+      "construction": "147",
+      "education_and_training": "294",
+      "electricity_gas_water_and_waste_services": "167",
+      "finance_and_insurance": "797",
+      "food_and_beverage_services": "1424",
+      "health_care_and_social_assistance": "718",
+      "information_media_and_telecommunications": "370",
+      "manufacturing": "548",
+      "other_services": "1154",
+      "public_administration_and_safety": "245",
+      "real_estate_services": "183",
+      "rental_and_hiring_services": "65",
+      "retail_trade": "1827",
+      "transport_postal_and_storage": "362",
+      "wholesale_trade": "580",
+      "total_establishments_in_block": "12259"
+    }
+  ]
+}

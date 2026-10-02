@@ -1,0 +1,101 @@
+config_version: '1.0'
+source:
+  dataset_id: d8e12b1f-2abf-44e4-9531-6f19cc61144b
+  dataset_title: Annual Report CBS
+  resource_id: 26031353-0d76-4c6b-8b52-71bdd4cfdc5d
+  resource_name: Associations Act data
+  resource_url: https://data.sa.gov.au/data/dataset/d8e12b1f-2abf-44e4-9531-6f19cc61144b/resource/26031353-0d76-4c6b-8b52-71bdd4cfdc5d/download/2017-18-consumer-and-business-services-associations-act_data.csv
+  resource_format: XLSX
+  publisher: Attorney-General's Department
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2025-06-25T15:19:06.795251'
+  resource_last_modified: '2018-10-17T23:34:16.095242'
+reader:
+  format: csv
+  encoding: cp1252
+  delimiter: ','
+  header: true
+  skip: 1
+  sheet_name: null
+  record_tag: null
+  zip_member: null
+source_reliability: 0.9
+source_reliability_reason: Official South Australian Attorney-General's Department
+  annual-report resource, reliable for the aggregate statistics it publishes. This
+  reliability does not imply that any row identifies an individual association.
+mappings:
+- source_fields:
+  - S9—Annual report
+  - column1
+  - column2
+  - column3
+  - column4
+  target_field: observation.source_record_id
+  transformation:
+    type: record_hash
+    expression: null
+    value: null
+  confidence: 1.0
+  derivation_level: L1
+  reason: No source-native record key is provided. Deterministically hash all five
+    raw data fields, including nulls, in the listed order for content-based traceability.
+    The loader's __firmable_row_id is not a source-native identifier.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: 26031353-0d76-4c6b-8b52-71bdd4cfdc5d
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: S9—Annual report
+  reason: Aggregate metric labels, a table heading and an explanatory footnote; none
+    identifies an individual legal entity. 'De-registered and wound-up' describes
+    a count category, not an entity status.
+- source_field: column1
+  reason: 2017-18 reporting-year heading and aggregate counts, not names, identifiers
+    or entity-level dates.
+- source_field: column2
+  reason: 2016-17 reporting-year heading and aggregate counts; no compatible entity-level
+    ontology field.
+- source_field: column3
+  reason: 2015-16 reporting-year heading and aggregate counts; no compatible entity-level
+    ontology field.
+- source_field: column4
+  reason: 2014-15 reporting-year heading and '#' unavailable-data markers; '#' must
+    not be interpreted as zero or an identifier.
+research_notes: []
+agent_notes:
+- Retry investigation used SELECT * FROM source_data and confirmed the accessible
+  rows are a reporting-year header, four aggregate statistical categories and a methodology
+  footnote. The held-out validation row was not exposed by this query.
+- No legal names, trading names, ABNs, ACNs, NZBNs, individual statuses, registration
+  dates or addresses are supplied. Do not manufacture entity records or assign entity_type=incorporated_association
+  to aggregate rows.
+- Keep the selected CSV reader (cp1252, comma delimiter, header=true, skip=1); metadata's
+  XLSX label is inconsistent with the selected CSV resource and does not justify changing
+  the reader.
+- Retain runtime-provided observation.ingested_at and observation.extractor_version.
+  For runtime observation.observed_at, the supplied resource_last_modified timestamp
+  2018-10-17T23:34:16.095242 is a resource-level timestamp proxy, not an individual
+  claim date. Do not interpret the 2025 catalog metadata modification as when these
+  historical statistics became true or conflate ingestion time with source observation
+  time.
+- This is a provenance-only mapping. Aggregate counts require a separate statistical
+  schema; the present Firmable entity ontology cannot represent them. Header and footnote
+  records must not be treated as entity observations.

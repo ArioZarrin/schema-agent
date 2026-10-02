@@ -1,0 +1,95 @@
+{
+  "runs": [
+    {
+      "mode": "normal",
+      "model_calls": 5,
+      "tool_calls": 0,
+      "validation_calls": 3,
+      "step_count": 8,
+      "input_tokens": 14691,
+      "output_tokens": 3592,
+      "total_tokens": 18283,
+      "estimated_cost_usd": null,
+      "wall_clock_seconds": 36.92,
+      "langsmith_enabled": true,
+      "langsmith_project": "lca-deployment"
+    },
+    {
+      "mode": "turbo",
+      "model_calls": 4,
+      "tool_calls": 3,
+      "validation_calls": 1,
+      "step_count": 7,
+      "input_tokens": 28049,
+      "output_tokens": 1793,
+      "total_tokens": 29842,
+      "estimated_cost_usd": null,
+      "wall_clock_seconds": 43.98,
+      "langsmith_enabled": true,
+      "langsmith_project": "lca-deployment"
+    }
+  ],
+  "revision_count": 1,
+  "model_calls": 9.0,
+  "tool_calls": 3.0,
+  "validation_calls": 4.0,
+  "step_count": 15.0,
+  "input_tokens": 42740.0,
+  "output_tokens": 5385.0,
+  "total_tokens": 48125.0,
+  "wall_clock_seconds": 80.9,
+  "estimated_cost_usd": null,
+  "langsmith_enabled": true,
+  "langsmith_project": "lca-deployment",
+  "dataset": {
+    "dataset_id": "1ca29b03-220d-4c19-b34e-c7932cd4508d",
+    "title": "Victorian Government Schools ABNs",
+    "slug": "victorian_government_schools_abns",
+    "publisher": "Department of Education",
+    "part1_confidence": 0.4869
+  },
+  "resource_id": "e70e6e0b-1a62-456b-a3d1-cd8f7508b54f",
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "field_metrics": {
+      "entity.abn": {
+        "rows": 308,
+        "non_null": 307,
+        "null_rate": 0.0032,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.source_record_id": {
+        "rows": 308,
+        "non_null": 308,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": [],
+        "duplicate_count": 0
+      },
+      "observation.source_id": {
+        "rows": 308,
+        "non_null": 308,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      },
+      "observation.licence": {
+        "rows": 308,
+        "non_null": 308,
+        "null_rate": 0.0,
+        "invalid_count": 0,
+        "invalid_rate": 0.0,
+        "invalid_examples": []
+      }
+    },
+    "validation_rows": 308
+  },
+  "extraction_rows": 1000,
+  "approved": true
+}

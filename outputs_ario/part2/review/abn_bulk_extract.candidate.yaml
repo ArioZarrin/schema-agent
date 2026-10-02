@@ -1,0 +1,199 @@
+config_version: '1.0'
+source:
+  dataset_id: 5bd7fcab-e315-42cb-8daf-50b7efc2027e
+  dataset_title: ABN Bulk Extract
+  resource_id: 0ae4d427-6fa8-4d40-8e76-c6909b5a071b
+  resource_name: ABN Bulk Extract Part 1
+  resource_url: https://data.gov.au/data/dataset/5bd7fcab-e315-42cb-8daf-50b7efc2027e/resource/0ae4d427-6fa8-4d40-8e76-c6909b5a071b/download/public_split_1_10.zip
+  resource_format: ZIP
+  publisher: Australian Business Register
+  licence: Creative Commons Attribution 3.0 Australia
+  metadata_modified: '2026-09-29T22:37:09.389618'
+  resource_last_modified: '2026-09-29T22:35:23.151038'
+reader:
+  format: xml
+  delimiter: null
+  header: false
+  skip: 0
+  sheet_name: null
+  record_tag: ABR
+  zip_member: 20260930_Public09.xml
+source_reliability: 0.99
+source_reliability_reason: The Australian Business Register is the authoritative publisher
+  of this official ABN register extract.
+mappings:
+- source_fields:
+  - ABR.ABN
+  target_field: entity.abn
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L0
+  reason: The source field is the ABN value in the ABR record.
+- source_fields:
+  - ABR.ABN
+  target_field: observation.source_record_id
+  transformation:
+    type: direct
+    expression: null
+    value: null
+  confidence: 0.99
+  derivation_level: L0
+  reason: ABN is the record's stable identifier in this register extract and allows
+    the source record to be traced.
+- source_fields:
+  - ABR.ABN.@status
+  target_field: entity.status
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN "ABR.ABN.@status" = 'ACT' THEN 'active' WHEN "ABR.ABN.@status"
+      = 'CAN' THEN 'deregistered' ELSE 'unknown' END
+    value: null
+  confidence: 0.98
+  derivation_level: L1
+  reason: Converts ABR status codes ACT and CAN to ontology statuses; unrecognized
+    values remain unknown.
+- source_fields:
+  - ABR.EntityType.EntityTypeInd
+  target_field: entity.entity_type
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN "ABR.EntityType.EntityTypeInd" = 'IND' THEN 'sole_trader'
+      WHEN "ABR.EntityType.EntityTypeInd" IN ('DIT', 'SMF') THEN 'trust' WHEN "ABR.EntityType.EntityTypeInd"
+      = 'FPT' THEN 'partnership' WHEN "ABR.EntityType.EntityTypeInd" = 'PRV' THEN
+      'company' ELSE 'unknown' END
+    value: null
+  confidence: 0.91
+  derivation_level: L1
+  reason: Maps familiar ABR entity type codes to ontology categories and defaults
+    other codes to unknown rather than guessing.
+- source_fields:
+  - ABR.ABN.@ABNStatusFromDate
+  target_field: observation.valid_from
+  transformation:
+    type: sql_expression
+    expression: TRY_STRPTIME("ABR.ABN.@ABNStatusFromDate", '%Y%m%d')::DATE
+    value: null
+  confidence: 0.96
+  derivation_level: L1
+  reason: The source labels this as the date from which the ABN status applies; parses
+    its YYYYMMDD representation.
+- source_fields:
+  - ABR.LegalEntity.BusinessAddress.AddressDetails.State
+  - ABR.MainEntity.BusinessAddress.AddressDetails.State
+  target_field: address.state
+  transformation:
+    type: sql_expression
+    expression: CASE WHEN COALESCE("ABR.LegalEntity.BusinessAddress.AddressDetails.State",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State") IN ('NSW', 'VIC', 'QLD',
+      'WA', 'SA', 'TAS', 'ACT', 'NT') THEN COALESCE("ABR.LegalEntity.BusinessAddress.AddressDetails.State",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State") WHEN COALESCE("ABR.LegalEntity.BusinessAddress.AddressDetails.State",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State") IS NOT NULL THEN 'OTHER'
+      ELSE NULL END
+    value: null
+  confidence: 0.96
+  derivation_level: L1
+  reason: Uses the populated legal-entity or main-entity business address state and
+    normalizes values to the ontology enum.
+- source_fields:
+  - ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode
+  - ABR.MainEntity.BusinessAddress.AddressDetails.Postcode
+  target_field: address.postcode
+  transformation:
+    type: sql_expression
+    expression: COALESCE("ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode")
+    value: null
+  confidence: 0.96
+  derivation_level: L1
+  reason: Uses the populated legal-entity or main-entity business address postcode.
+- source_fields: []
+  target_field: address.country
+  transformation:
+    type: constant
+    expression: null
+    value: AU
+  confidence: 0.99
+  derivation_level: L1
+  reason: This is an Australian Business Register extract.
+- source_fields: []
+  target_field: observation.source_id
+  transformation:
+    type: constant
+    expression: null
+    value: 0ae4d427-6fa8-4d40-8e76-c6909b5a071b
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN resource identifier.
+- source_fields: []
+  target_field: observation.licence
+  transformation:
+    type: constant
+    expression: null
+    value: Creative Commons Attribution 3.0 Australia
+  confidence: 1.0
+  derivation_level: L0
+  reason: Deterministic CKAN dataset licence.
+runtime_fields:
+  observation.observed_at: resource_timestamp_or_ingestion_time
+  observation.ingested_at: ingestion_time
+  observation.extractor_version: extractor_version
+unmapped_fields:
+- source_field: ABR.@recordLastUpdatedDate
+  reason: Dataset record update date is not an ontology target; host code supplies
+    observed_at.
+- source_field: ABR.@replaced
+  reason: Replacement indicator has no corresponding ontology field.
+- source_field: ABR.EntityType.EntityTypeText
+  reason: The entity type code is used for the conservative enum mapping; the free-text
+    label has no separate ontology target.
+- source_field: ABR.LegalEntity.IndividualName.@type
+  reason: Name-kind marker is not an entity name field.
+- source_field: ABR.LegalEntity.IndividualName.GivenName
+  reason: Given-name values may be serialized arrays and cannot be safely mapped as
+    a complete registered legal name.
+- source_field: ABR.LegalEntity.IndividualName.FamilyName
+  reason: Family name alone is not the complete registered legal name.
+- source_field: ABR.GST.@status
+  reason: GST registration status is distinct from entity status and has no matching
+    ontology field.
+- source_field: ABR.GST.@GSTStatusFromDate
+  reason: Date applies to GST status, which has no matching ontology field.
+- source_field: raw_json
+  reason: Raw record payload is retained for traceability but has no semantic ontology
+    target.
+- source_field: ABR.MainEntity.NonIndividualName.@type
+  reason: Name-kind marker is not itself a name value.
+- source_field: ABR.MainEntity.NonIndividualName.NonIndividualNameText
+  reason: The profile does not establish that this field consistently represents the
+    registered legal name across entity types.
+- source_field: ABR.MainEntity.BusinessAddress.AddressDetails.State
+  reason: Used together with the legal-entity state field for address.state.
+- source_field: ABR.MainEntity.BusinessAddress.AddressDetails.Postcode
+  reason: Used together with the legal-entity postcode field for address.postcode.
+- source_field: ABR.ASICNumber.@ASICNumberType
+  reason: ASIC number type is undetermined in the profile; it does not establish that
+    the associated value is an ACN.
+- source_field: ABR.ASICNumber
+  reason: The source does not establish this as an ACN, and no deterministic identifier-check
+    result is provided.
+- source_field: ABR.OtherEntity.NonIndividualName.@type
+  reason: Name-kind metadata, sometimes serialized as arrays, has no ontology target.
+- source_field: ABR.OtherEntity.NonIndividualName.NonIndividualNameText
+  reason: May contain multiple or differently classified names; the profile does not
+    support a reliable legal-name or trading-name mapping.
+- source_field: ABR.LegalEntity.IndividualName.NameTitle
+  reason: Title is not represented in the ontology.
+- source_field: ABR.DGR.@status
+  reason: DGR status is not the entity's registration status and has no matching ontology
+    field.
+- source_field: ABR.DGR.@DGRStatusFromDate
+  reason: Date applies to DGR status, which has no matching ontology field.
+- source_field: ABR.DGR.NonIndividualName.@type
+  reason: DGR name-kind metadata has no ontology target.
+- source_field: ABR.DGR.NonIndividualName.NonIndividualNameText
+  reason: DGR-related names do not establish the entity's legal name or trading name.
+research_notes: []
+agent_notes: []

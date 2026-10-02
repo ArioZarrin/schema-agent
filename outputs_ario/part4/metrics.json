@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-10-02T04:53:37.303943+00:00",
+  "input_mode": "current_database",
+  "gold_observations": 6000,
+  "linked_observations": 3959,
+  "firmable_entities": 3415,
+  "entity_field_scores": 17624,
+  "entity_field_claims": 20865,
+  "entity_field_conflicts": 0,
+  "entity_conflict_values": 0,
+  "profiles_with_conflicts": 0,
+  "single_claim_fields": 16187,
+  "agreeing_fields": 1437,
+  "zero_support_conflicts": 0,
+  "database_written": true
+}

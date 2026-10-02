@@ -1,0 +1,665 @@
+{
+  "metadata": {
+    "dataset_id": "5bd7fcab-e315-42cb-8daf-50b7efc2027e",
+    "title": "ABN Bulk Extract",
+    "publisher": "Australian Business Register",
+    "resource_id": "0ae4d427-6fa8-4d40-8e76-c6909b5a071b",
+    "resource_name": "ABN Bulk Extract Part 1",
+    "resource_format": "ZIP",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-09-29T22:37:09.389618",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/abn_bulk_extract/extracted/20260930_Public09.xml",
+    "reader": {
+      "format": "xml",
+      "delimiter": null,
+      "header": false,
+      "skip": 0,
+      "sheet_name": null,
+      "record_tag": "ABR",
+      "zip_member": "20260930_Public09.xml"
+    }
+  },
+  "dataset_stats": {
+    "row_count": 1028500,
+    "agent_rows": 1027500,
+    "validation_rows": 1000,
+    "column_count": 28
+  },
+  "columns": [
+    {
+      "name": "ABR.@recordLastUpdatedDate",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2489,
+      "examples": [
+        "20251110",
+        "20240223",
+        "20160509",
+        "20250828",
+        "20020110"
+      ]
+    },
+    {
+      "name": "ABR.@replaced",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1,
+      "examples": [
+        "N"
+      ]
+    },
+    {
+      "name": "ABR.ABN.@status",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2,
+      "examples": [
+        "ACT",
+        "CAN"
+      ]
+    },
+    {
+      "name": "ABR.ABN.@ABNStatusFromDate",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 2398,
+      "examples": [
+        "20251107",
+        "20240222",
+        "20160506",
+        "20250827",
+        "20020110"
+      ]
+    },
+    {
+      "name": "ABR.ABN",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5000,
+      "examples": [
+        "49230019352",
+        "49234713194",
+        "49738677380",
+        "48789509255",
+        "47397732452"
+      ]
+    },
+    {
+      "name": "ABR.EntityType.EntityTypeInd",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 24,
+      "examples": [
+        "IND",
+        "DIT",
+        "FPT",
+        "SMF",
+        "PRV"
+      ]
+    },
+    {
+      "name": "ABR.EntityType.EntityTypeText",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 24,
+      "examples": [
+        "Individual/Sole Trader",
+        "Discretionary Investment Trust",
+        "Family Partnership",
+        "ATO Regulated Self-Managed Superannuation Fund",
+        "Australian Private Company"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.IndividualName.@type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4516,
+      "sample_distinct": 1,
+      "examples": [
+        "LGL"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.IndividualName.GivenName",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4552,
+      "sample_distinct": 2430,
+      "examples": [
+        "ADAM",
+        "EVGENII",
+        "SULEYMAN",
+        "[\"DOROTHY\", \"JEAN\"]",
+        "[\"LUCY\", \"ROSE\"]"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.IndividualName.FamilyName",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4516,
+      "sample_distinct": 2187,
+      "examples": [
+        "AHMED ABDURHIM",
+        "VERUKHIN",
+        "SUEL",
+        "HORNE",
+        "KELLY"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.BusinessAddress.AddressDetails.State",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4532,
+      "sample_distinct": 8,
+      "examples": [
+        "WA",
+        "NSW",
+        "VIC",
+        "QLD",
+        "ACT"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.4516,
+      "sample_distinct": 1077,
+      "examples": [
+        "6000",
+        "2019",
+        "2200",
+        "3438",
+        "2343"
+      ]
+    },
+    {
+      "name": "ABR.GST.@status",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 3,
+      "examples": [
+        "NON",
+        "ACT",
+        "CAN"
+      ]
+    },
+    {
+      "name": "ABR.GST.@GSTStatusFromDate",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1135,
+      "examples": [
+        "19000101",
+        "20240222",
+        "20160507",
+        "20000701",
+        "20070630"
+      ]
+    },
+    {
+      "name": "raw_json",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 5000,
+      "examples": [
+        "{\"ABR\": {\"@recordLastUpdatedDate\": \"20251110\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20251107\", \"#text\": \"49230019352\"}, \"EntityType\": {\"EntityTypeInd\": \"IND\", \"EntityTypeText\": \"Individual/Sole Trader\"}, \"LegalEntity\": {\"IndividualName\": {\"@type\": \"LGL\", \"GivenName\": \"A",
+        "{\"ABR\": {\"@recordLastUpdatedDate\": \"20240223\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20240222\", \"#text\": \"49234713194\"}, \"EntityType\": {\"EntityTypeInd\": \"DIT\", \"EntityTypeText\": \"Discretionary Investment Trust\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIn",
+        "{\"ABR\": {\"@recordLastUpdatedDate\": \"20160509\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"CAN\", \"@ABNStatusFromDate\": \"20160506\", \"#text\": \"49738677380\"}, \"EntityType\": {\"EntityTypeInd\": \"DIT\", \"EntityTypeText\": \"Discretionary Investment Trust\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIn",
+        "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250828\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250827\", \"#text\": \"48789509255\"}, \"EntityType\": {\"EntityTypeInd\": \"IND\", \"EntityTypeText\": \"Individual/Sole Trader\"}, \"LegalEntity\": {\"IndividualName\": {\"@type\": \"LGL\", \"GivenName\": \"E",
+        "{\"ABR\": {\"@recordLastUpdatedDate\": \"20020110\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"CAN\", \"@ABNStatusFromDate\": \"20020110\", \"#text\": \"47397732452\"}, \"EntityType\": {\"EntityTypeInd\": \"IND\", \"EntityTypeText\": \"Individual/Sole Trader\"}, \"LegalEntity\": {\"IndividualName\": {\"@type\": \"LGL\", \"NameTitle\": \"M"
+      ]
+    },
+    {
+      "name": "ABR.MainEntity.NonIndividualName.@type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5484,
+      "sample_distinct": 1,
+      "examples": [
+        "MN"
+      ]
+    },
+    {
+      "name": "ABR.MainEntity.NonIndividualName.NonIndividualNameText",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5484,
+      "sample_distinct": 2258,
+      "examples": [
+        "The Trustee for HPA Family Trust",
+        "THE TRUSTEE FOR PARK ROAD TRUST",
+        "K.L LEWIS & P.M LEWIS",
+        "The Trustee for The SDSL Superannuation Fund",
+        "THE COLLEY SUPERANNUATION FUND"
+      ]
+    },
+    {
+      "name": "ABR.MainEntity.BusinessAddress.AddressDetails.State",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5498,
+      "sample_distinct": 8,
+      "examples": [
+        "QLD",
+        "NSW",
+        "WA",
+        "VIC",
+        "SA"
+      ]
+    },
+    {
+      "name": "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.5488,
+      "sample_distinct": 983,
+      "examples": [
+        "4300",
+        "4169",
+        "2430",
+        "6059",
+        "2000"
+      ]
+    },
+    {
+      "name": "ABR.ASICNumber.@ASICNumberType",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7944,
+      "sample_distinct": 1,
+      "examples": [
+        "undetermined"
+      ]
+    },
+    {
+      "name": "ABR.ASICNumber",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7944,
+      "sample_distinct": 1028,
+      "examples": [
+        "053083766",
+        "629821183",
+        "625056368",
+        "689619958",
+        "117933561"
+      ]
+    },
+    {
+      "name": "ABR.OtherEntity.NonIndividualName.@type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7094,
+      "sample_distinct": 20,
+      "examples": [
+        "TRD",
+        "BN",
+        "[\"TRD\", \"BN\", \"BN\"]",
+        "[\"BN\", \"BN\", \"BN\", \"BN\"]",
+        "[\"TRD\", \"OTN\"]"
+      ]
+    },
+    {
+      "name": "ABR.OtherEntity.NonIndividualName.NonIndividualNameText",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.7094,
+      "sample_distinct": 1453,
+      "examples": [
+        "30 PARK ROAD TRUST",
+        "PKL BUILDING",
+        "SILVERFOX ACCOUNTING SERVICES",
+        "TDK FINANCIAL SERVICES PTY LTD",
+        "Pizza @ QV"
+      ]
+    },
+    {
+      "name": "ABR.LegalEntity.IndividualName.NameTitle",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9734,
+      "sample_distinct": 6,
+      "examples": [
+        "MR",
+        "DR",
+        "MRS",
+        "MS",
+        "LADY"
+      ]
+    },
+    {
+      "name": "ABR.DGR.@status",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9984,
+      "sample_distinct": 1,
+      "examples": [
+        "ACT"
+      ]
+    },
+    {
+      "name": "ABR.DGR.@DGRStatusFromDate",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.998,
+      "sample_distinct": 10,
+      "examples": [
+        "20210603",
+        "20171117",
+        "20150401",
+        "20240514",
+        "20150620"
+      ]
+    },
+    {
+      "name": "ABR.DGR.NonIndividualName.@type",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9996,
+      "sample_distinct": 2,
+      "examples": [
+        "[\"DGR\", \"DGR\", \"DGR\"]",
+        "DGR"
+      ]
+    },
+    {
+      "name": "ABR.DGR.NonIndividualName.NonIndividualNameText",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.9996,
+      "sample_distinct": 2,
+      "examples": [
+        "[\"ORANGE CHRISTIAN SCHOOL SCHOLARSHIP FUND\", \"ORANGE CHRISTIAN SCHOOLS LTD BUILDING FUND\", \"ORANGE CHRISTIAN SCHOOLS LTD LIBRARY FUND\"]",
+        "GHANA RELIEF FUND"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "ABR.@recordLastUpdatedDate": "20250627",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250626",
+      "ABR.ABN": "50688475809",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "ACT",
+      "ABR.GST.@GSTStatusFromDate": "20250626",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250627\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250626\", \"#text\": \"50688475809\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"PEAK CONVENIENCE QSR PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"VIC\", \"Postcode\": \"3000\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688475809\"}, \"GST\": {\"@status\": \"ACT\", \"@GSTStatusFromDate\": \"20250626\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "PEAK CONVENIENCE QSR PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "VIC",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "3000",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688475809",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20220325",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "CAN",
+      "ABR.ABN.@ABNStatusFromDate": "20220322",
+      "ABR.ABN": "50688476376",
+      "ABR.EntityType.EntityTypeInd": "IND",
+      "ABR.EntityType.EntityTypeText": "Individual/Sole Trader",
+      "ABR.LegalEntity.IndividualName.@type": "LGL",
+      "ABR.LegalEntity.IndividualName.GivenName": "[\"SHARON\", \"MAREE\"]",
+      "ABR.LegalEntity.IndividualName.FamilyName": "KENNEDY",
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": "VIC",
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": "3875",
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20220325\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"CAN\", \"@ABNStatusFromDate\": \"20220322\", \"#text\": \"50688476376\"}, \"EntityType\": {\"EntityTypeInd\": \"IND\", \"EntityTypeText\": \"Individual/Sole Trader\"}, \"LegalEntity\": {\"IndividualName\": {\"@type\": \"LGL\", \"GivenName\": [\"SHARON\", \"MAREE\"], \"FamilyName\": \"KENNEDY\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"VIC\", \"Postcode\": \"3875\"}}}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": null,
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.ASICNumber.@ASICNumberType": null,
+      "ABR.ASICNumber": null,
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20250627",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250626",
+      "ABR.ABN": "50688479870",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250627\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250626\", \"#text\": \"50688479870\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"AO YEAH TRAVEL PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"WA\", \"Postcode\": \"6148\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688479870\"}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "AO YEAH TRAVEL PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "WA",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "6148",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688479870",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20250908",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250627",
+      "ABR.ABN": "50688481852",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250908\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250627\", \"#text\": \"50688481852\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"PRINCIPAL GROUP INVESTMENTS PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"WA\", \"Postcode\": \"6019\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688481852\"}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "PRINCIPAL GROUP INVESTMENTS PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "WA",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "6019",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688481852",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20250710",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250701",
+      "ABR.ABN": "50688482662",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "ACT",
+      "ABR.GST.@GSTStatusFromDate": "20250701",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250710\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250701\", \"#text\": \"50688482662\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"INSIQA PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"QLD\", \"Postcode\": \"4061\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688482662\"}, \"GST\": {\"@status\": \"ACT\", \"@GSTStatusFromDate\": \"20250701\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "INSIQA PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "QLD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "4061",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688482662",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20260703",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20260701",
+      "ABR.ABN": "50688483472",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20260703\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20260701\", \"#text\": \"50688483472\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"GORRINGE CORPORATE INVESTMENTS PTY LIMITED\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"ACT\", \"Postcode\": \"2607\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688483472\"}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "GORRINGE CORPORATE INVESTMENTS PTY LIMITED",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "ACT",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "2607",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688483472",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20060116",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20060116",
+      "ABR.ABN": "50688483553",
+      "ABR.EntityType.EntityTypeInd": "DIT",
+      "ABR.EntityType.EntityTypeText": "Discretionary Investment Trust",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20060116\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20060116\", \"#text\": \"50688483553\"}, \"EntityType\": {\"EntityTypeInd\": \"DIT\", \"EntityTypeText\": \"Discretionary Investment Trust\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"The trustee for The Unser Kleiner Trust\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"QLD\", \"Postcode\": \"4160\"}}}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "The trustee for The Unser Kleiner Trust",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "QLD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "4160",
+      "ABR.ASICNumber.@ASICNumberType": null,
+      "ABR.ASICNumber": null,
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20250701",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250701",
+      "ABR.ABN": "50688484719",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "NON",
+      "ABR.GST.@GSTStatusFromDate": "19000101",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20250701\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250701\", \"#text\": \"50688484719\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"NEXA WEB DEVELOPMENT PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"NSW\", \"Postcode\": \"2567\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688484719\"}, \"GST\": {\"@status\": \"NON\", \"@GSTStatusFromDate\": \"19000101\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "NEXA WEB DEVELOPMENT PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "NSW",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "2567",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688484719",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20260730",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250627",
+      "ABR.ABN": "50688487149",
+      "ABR.EntityType.EntityTypeInd": "PRV",
+      "ABR.EntityType.EntityTypeText": "Australian Private Company",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "ACT",
+      "ABR.GST.@GSTStatusFromDate": "20260701",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20260730\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250627\", \"#text\": \"50688487149\"}, \"EntityType\": {\"EntityTypeInd\": \"PRV\", \"EntityTypeText\": \"Australian Private Company\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"AYGORIA PTY LTD\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"VIC\", \"Postcode\": \"3167\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688487149\"}, \"GST\": {\"@status\": \"ACT\", \"@GSTStatusFromDate\": \"20260701\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "AYGORIA PTY LTD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "VIC",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "3167",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688487149",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    },
+    {
+      "ABR.@recordLastUpdatedDate": "20260902",
+      "ABR.@replaced": "N",
+      "ABR.ABN.@status": "ACT",
+      "ABR.ABN.@ABNStatusFromDate": "20250801",
+      "ABR.ABN": "50688492382",
+      "ABR.EntityType.EntityTypeInd": "OIE",
+      "ABR.EntityType.EntityTypeText": "Other Incorporated Entity",
+      "ABR.LegalEntity.IndividualName.@type": null,
+      "ABR.LegalEntity.IndividualName.GivenName": null,
+      "ABR.LegalEntity.IndividualName.FamilyName": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.State": null,
+      "ABR.LegalEntity.BusinessAddress.AddressDetails.Postcode": null,
+      "ABR.GST.@status": "ACT",
+      "ABR.GST.@GSTStatusFromDate": "20251001",
+      "raw_json": "{\"ABR\": {\"@recordLastUpdatedDate\": \"20260902\", \"@replaced\": \"N\", \"ABN\": {\"@status\": \"ACT\", \"@ABNStatusFromDate\": \"20250801\", \"#text\": \"50688492382\"}, \"EntityType\": {\"EntityTypeInd\": \"OIE\", \"EntityTypeText\": \"Other Incorporated Entity\"}, \"MainEntity\": {\"NonIndividualName\": {\"@type\": \"MN\", \"NonIndividualNameText\": \"1-RIDING INTERNATIONAL INC.\"}, \"BusinessAddress\": {\"AddressDetails\": {\"State\": \"QLD\", \"Postcode\": \"4217\"}}}, \"ASICNumber\": {\"@ASICNumberType\": \"undetermined\", \"#text\": \"688492382\"}, \"GST\": {\"@status\": \"ACT\", \"@GSTStatusFromDate\": \"20251001\"}}}",
+      "ABR.MainEntity.NonIndividualName.@type": "MN",
+      "ABR.MainEntity.NonIndividualName.NonIndividualNameText": "1-RIDING INTERNATIONAL INC.",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.State": "QLD",
+      "ABR.MainEntity.BusinessAddress.AddressDetails.Postcode": "4217",
+      "ABR.ASICNumber.@ASICNumberType": "undetermined",
+      "ABR.ASICNumber": "688492382",
+      "ABR.OtherEntity.NonIndividualName.@type": null,
+      "ABR.OtherEntity.NonIndividualName.NonIndividualNameText": null,
+      "ABR.LegalEntity.IndividualName.NameTitle": null,
+      "ABR.DGR.@status": null,
+      "ABR.DGR.@DGRStatusFromDate": null,
+      "ABR.DGR.NonIndividualName.@type": null,
+      "ABR.DGR.NonIndividualName.NonIndividualNameText": null
+    }
+  ]
+}

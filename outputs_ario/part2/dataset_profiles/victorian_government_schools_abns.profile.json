@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "dataset_id": "1ca29b03-220d-4c19-b34e-c7932cd4508d",
+    "title": "Victorian Government Schools ABNs",
+    "publisher": "Department of Education",
+    "resource_id": "e70e6e0b-1a62-456b-a3d1-cd8f7508b54f",
+    "resource_name": "Victorian Government Schools ABNs",
+    "resource_format": "XLSX",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2025-06-25T17:38:22.490113",
+    "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/victorian_government_schools_abns/dv183-schoolABNdetails.xlsx",
+    "reader": {
+      "format": "xlsx",
+      "delimiter": null,
+      "header": true,
+      "skip": 0,
+      "sheet_name": "Sheet1",
+      "record_tag": null,
+      "zip_member": null
+    }
+  },
+  "dataset_stats": {
+    "row_count": 1540,
+    "agent_rows": 1232,
+    "validation_rows": 308,
+    "column_count": 5
+  },
+  "columns": [
+    {
+      "name": "SchoolNumber",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1232,
+      "examples": [
+        "3515",
+        "4932",
+        "824",
+        "5050",
+        "4744"
+      ]
+    },
+    {
+      "name": "SchoolName",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1232,
+      "examples": [
+        "Mallacoota P-12 College",
+        "Burwood Heights Primary School",
+        "Preston South Primary School",
+        "Glengala/Sunshine West Primary School",
+        "Sunshine Heights Primary School"
+      ]
+    },
+    {
+      "name": "Fin_Period",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1,
+      "examples": [
+        "201506"
+      ]
+    },
+    {
+      "name": "LoadDate",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1232,
+      "examples": [
+        "2015-07-09 06:30:20.463000",
+        "2015-07-02 06:32:48.887000",
+        "2015-07-08 06:30:16.230000",
+        "2015-07-02 06:33:08.137000",
+        "2015-07-14 06:33:03.690000"
+      ]
+    },
+    {
+      "name": "ABN",
+      "dtype": "VARCHAR",
+      "sample_null_rate": 0.0,
+      "sample_distinct": 1232,
+      "examples": [
+        "40759147767",
+        "78292516307",
+        "24839198192",
+        "12313426597",
+        "17704078200"
+      ]
+    }
+  ],
+  "sample_rows": [
+    {
+      "SchoolNumber": "3",
+      "SchoolName": "Allansford and District Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-14 06:30:43.863000",
+      "ABN": "37051817052"
+    },
+    {
+      "SchoolNumber": "4",
+      "SchoolName": "Avoca Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-07 06:36:29.823000",
+      "ABN": "39744336864"
+    },
+    {
+      "SchoolNumber": "8",
+      "SchoolName": "Avenel Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-02 06:30:42.930000",
+      "ABN": "88819505004"
+    },
+    {
+      "SchoolNumber": "12",
+      "SchoolName": "Warrandyte Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-02 06:30:43.760000",
+      "ABN": "89340494951"
+    },
+    {
+      "SchoolNumber": "28",
+      "SchoolName": "Bacchus Marsh Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-14 06:30:45.510000",
+      "ABN": "61829351598"
+    },
+    {
+      "SchoolNumber": "33",
+      "SchoolName": "Ballarat Primary School (Dana Street)",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-14 06:30:46.543000",
+      "ABN": "30126215434"
+    },
+    {
+      "SchoolNumber": "37",
+      "SchoolName": "Wodonga Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-02 06:30:44.597000",
+      "ABN": "30751949495"
+    },
+    {
+      "SchoolNumber": "40",
+      "SchoolName": "Berwick Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-17 06:30:48.790000",
+      "ABN": "61834093182"
+    },
+    {
+      "SchoolNumber": "60",
+      "SchoolName": "Beaufort Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-07 06:36:30.583000",
+      "ABN": "57463155273"
+    },
+    {
+      "SchoolNumber": "84",
+      "SchoolName": "Cheltenham Primary School",
+      "Fin_Period": "201506",
+      "LoadDate": "2015-07-02 06:30:45.607000",
+      "ABN": "69873393662"
+    }
+  ]
+}

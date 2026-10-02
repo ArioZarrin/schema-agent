@@ -1,0 +1,18 @@
+{
+  "stage": "approved",
+  "dataset": {
+    "dataset_id": "5bd7fcab-e315-42cb-8daf-50b7efc2027e",
+    "title": "ABN Bulk Extract",
+    "slug": "abn_bulk_extract",
+    "publisher": "Australian Business Register",
+    "part1_confidence": 0.8301
+  },
+  "resource_id": "0ae4d427-6fa8-4d40-8e76-c6909b5a071b",
+  "file_path": "/Users/ario/Documents/firmable/outputs/part2/raw/abn_bulk_extract/extracted/20260930_Public09.xml",
+  "source_table": "src_abn_bulk_extract",
+  "profile_path": "/Users/ario/Documents/firmable/outputs/part2/dataset_profiles/abn_bulk_extract.profile.json",
+  "candidate_path": "/Users/ario/Documents/firmable/outputs/part2/review/abn_bulk_extract.candidate.yaml",
+  "updated_at": "2026-10-02T03:34:52.923148+00:00",
+  "gold_table": "gold_abn_bulk_extract",
+  "rows": 1000
+}
